@@ -6,17 +6,17 @@ const User = require('../models/User');
 
 const connectToDatabase = require('../database/db');
 
-router.get('/', async(req, res) => {
-    try{
+router.get('/', async (req, res) => {
+    try {
         await connectToDatabase()
         const result = await User.find()
-        if(!result){
+        if (!result) {
             res.json({
-                status: "Failed", 
+                status: "Failed",
                 message: "not found records"
             })
         }
-        else{
+        else {
             res.json({
                 status: 'SUCCESS',
                 message: "record found",
@@ -24,23 +24,29 @@ router.get('/', async(req, res) => {
             })
         }
 
-    }catch(errors)
-    {
+    } catch (errors) {
         res.send('ERROR' + errors)
     }
-    
+
 });
 
 router.post('/', async (req, res) => {
-    const user = new User({
-        firstName: req.body.firstName
-    })
-    try {
-        await connectToDatabase();
-        const saveData = await user.save()
-        res.json(saveData)
-    } catch (err) {
-        res.send('Error')
+    await connectToDatabase();
+    const u = await User.findOne({ firstName: req.body.firstName })
+    if (u) {
+        return res.status(400).json("this userr already exists")
+    }
+    else {
+        const user = new User({
+            firstName: req.body.firstName
+        })
+        try {
+            const saveData = user.save();
+            res.json(saveData); //TODO fix json dat not showing
+
+        } catch (err) {
+            res.send(err)
+        }
     }
 });
 

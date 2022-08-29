@@ -10,7 +10,7 @@ app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
 
-const userRoutes = require('./routes/Users');
+const userRoutes = require('./routes/usersRoutes');
 app.use('/users', userRoutes); 
 
 const PORT = 9000
