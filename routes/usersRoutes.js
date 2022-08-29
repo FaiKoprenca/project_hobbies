@@ -32,13 +32,13 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     await connectToDatabase();
-    const u = await User.findOne({ firstName: req.body.firstName })
+    const u = await User.findOne({ username: req.body.username })
     if (u) {
         return res.status(400).json("this user already exists")
     }
     else {
         const user = new User({
-            firstName: req.body.firstName
+            username: req.body.username
         })
         try {
             const saveData = user.save();
@@ -48,6 +48,7 @@ router.post('/', async (req, res) => {
             res.send(err)
         }
     }
+
 });
 
 module.exports = router;
