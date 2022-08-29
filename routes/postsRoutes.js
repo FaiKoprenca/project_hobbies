@@ -8,8 +8,17 @@ const connectToDatabase = require('../database/db');
 router.post('/', async (req, res) => {
     const post = new Posts({
         userId: req.user.id,
-        text: req.body.text
+        text: req.body.text,
+        tags: req.body.tags
     })
+
+    try {
+        await connectToDatabase();
+        const savePost = post.save();
+        res.status(200).json(savePost);
+    } catch (error) {
+        res.send(error)
+    }
 })
 
 //get
