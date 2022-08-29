@@ -3,18 +3,17 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config()
 
-const connectToDatabase = require('./database/db');
+const app = express()
+app.use(cors())
 
-/*const DB_USER = 'memories';
-const PASSWORD = encodeURIComponent(process.env.MONGO_ATLAS_PW);
-const url = `mongodb+srv://${DB_USER}:${PASSWORD}@hobbies.xqzaqqu.mongodb.net/?retryWrites=true&w=majority`;
-mongoose.connect(url,
-  {
-    useNewUrlParser: true,
-  })
-  .then(() => {
-    console.log('Connected to database !!');
-  })
-  .catch((err)=>{
-    console.log('Connection failed !!'+ err.message);
-  });*/
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json())
+
+const userRoutes = require('./routes/Users');
+app.use('/users', userRoutes); 
+
+const PORT = 9000
+app.listen(PORT, () => {
+	console.log(`Server running on port-: http://localhost:${PORT}`)
+});
