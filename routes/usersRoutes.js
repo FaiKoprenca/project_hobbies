@@ -34,7 +34,7 @@ router.post('/', async (req, res) => {
     await connectToDatabase();
     const u = await User.findOne({ firstName: req.body.firstName })
     if (u) {
-        return res.status(400).json("this userr already exists")
+        return res.status(400).json("this user already exists")
     }
     else {
         const user = new User({
@@ -42,7 +42,7 @@ router.post('/', async (req, res) => {
         })
         try {
             const saveData = user.save();
-            res.json(saveData); //TODO fix json dat not showing
+            res.json(saveData); //TODO fix json data not showing
 
         } catch (err) {
             res.send(err)
