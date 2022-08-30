@@ -76,24 +76,24 @@ module.exports.postPostAtUser = async (event, context, callback) => {
 
 module.exports.postCommentAtPost = async (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;
-    const postId = event.pathParameters.id;
+    const _id = event.pathParameters.id;
 
     const { text } = JSON.parse(
         event.body
     );
 
-    const comment = new Comment({
-        postId,
+    const comments = new Comment({
         text       
     });
 
     try {
         await connectToDatabase();
-        console.log(comment);
+        console.log(comments);
+        console.log(_id)
 
-        const comments = Comment.create(comment).then(function (dbcomment) {
-            return Comment.findOneAndUpdate({ postId }, {
-                $push: { comments: dbcomment.postId }
+        const comment = Comment.create(comments).then(function (dbcomment) {
+            return Post.findByIdAndUpdate({ _id }, {
+                $push: { comment: dbcomment.id }
             }, { new: true });
         })
         callback(null, {
@@ -105,7 +105,7 @@ module.exports.postCommentAtPost = async (event, context, callback) => {
                 "Access-Control-Allow-Headers": "*"
             },
             statusCode: 200,
-            body: JSON.stringify(comments),
+            body: JSON.stringify(comment),
         });
     } catch (error) {
         returnError(error);
