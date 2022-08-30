@@ -1,5 +1,4 @@
-
-service: sample-app-faik
+service: hobbies-app
 provider:
   name: aws
   runtime: nodejs16.x
@@ -9,7 +8,7 @@ provider:
 
 functions: 
   getUsers:
-    handler: handler.getUsers
+    handler: handlers/handlerTest.getUsers
     events:
       - http: 
           path: user

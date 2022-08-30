@@ -1,5 +1,5 @@
-const connectToDatabase = require('./database/db');
-const User = require('./models/User');
+const connectToDatabase = require('../database/db');
+const User = require('../models/User');
 
 module.exports.getUsers = async (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;
