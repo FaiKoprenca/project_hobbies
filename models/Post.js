@@ -3,10 +3,10 @@ const Schema = mongoose.Schema;
 
 const PostSchema = new Schema(
   {
-    userId: {
+    /*userId: {
       type: Schema.Types.ObjectId,
-      ref: "User",
-    },
+      ref: "users",
+    },*/
     username: {
       type: String,
       required: true,
@@ -30,12 +30,15 @@ const PostSchema = new Schema(
     },
     endTime: {
       type: String,
-    },
-    
+    }, 
     limit: {
       type: Number,
       required: true,
     },
+    comment: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Comment'
+    }],
     history: [
       {
         date: { type: Date, default: Date.now() },

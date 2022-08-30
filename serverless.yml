@@ -23,5 +23,13 @@ functions:
           method: post
           cors: true
 
+  postCommentAtPost:
+    handler: handlers/handlerTest.postCommentAtPost
+    events:
+      - http:
+          path: post/comment/user/{id}
+          method: post
+          cors: true   
+
 plugins:
   - serverless-offline

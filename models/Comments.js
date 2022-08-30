@@ -15,7 +15,8 @@ const commentSchema = new Schema({
         ref: 'Post'
     },
     text: {
-        type: String
+        type: String,
+        required: true
     }
 })
 
