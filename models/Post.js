@@ -22,7 +22,7 @@ const PostSchema = new mongoose.Schema(
     ],
     date: {
       type: Date,
-      default: Date.now,
+      default: Date.now(),
     },
     startTime: {
       type: String,
@@ -44,7 +44,7 @@ const PostSchema = new mongoose.Schema(
         date: { type: Date, default: Date.now() },
         userId: { type: Schema.Types.ObjectId, ref: "User" },
       },
-    ],//front end type of event: indor or outdor
+    ],//front end type of event: indoor or outdoor
   },
   {
     timeStamps: true,

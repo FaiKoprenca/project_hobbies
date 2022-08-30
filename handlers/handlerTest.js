@@ -31,7 +31,7 @@ module.exports.getUsers = async (event, context, callback) => {
 
 module.exports.postPostAtUser = async (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;
-    const _id = event.pathParameters.id;
+    const id = event.pathParameters.id;
 
     const { username, text, tags/*, date, startTime, endTime,*/, limit } = JSON.parse(
         event.body
@@ -51,12 +51,12 @@ module.exports.postPostAtUser = async (event, context, callback) => {
     try {
         await connectToDatabase();
         console.log(post);
-
-        const posts = Post.create(post).then(function (dbposts) {
-            return User.findByIdAndUpdate({ _id }, {
-                $push: { posts: dbposts.id }
-            }, { new: true });
-        })
+        const createPost = await Post.create(post);
+        const createdPost = await User.findOneAndUpdate(
+            { _id: id },
+            { $push: { posts: createPost._id } },
+            { new: true }
+        );
         callback(null, {
             headers: {
                 "Content-Type": "application/json",
@@ -66,7 +66,7 @@ module.exports.postPostAtUser = async (event, context, callback) => {
                 "Access-Control-Allow-Headers": "*"
             },
             statusCode: 200,
-            body: JSON.stringify(posts),
+            body: JSON.stringify(createdPost),
         });
     } catch (error) {
         returnError(error);
@@ -76,7 +76,7 @@ module.exports.postPostAtUser = async (event, context, callback) => {
 
 module.exports.postCommentAtPost = async (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;
-    const _id = event.pathParameters.id;
+    const id = event.pathParameters.id;
 
     const { text } = JSON.parse(
         event.body
@@ -89,13 +89,13 @@ module.exports.postCommentAtPost = async (event, context, callback) => {
     try {
         await connectToDatabase();
         console.log(comments);
-        console.log(_id)
 
-        const comment = Comment.create(comments).then(function (dbcomment) {
-            return Post.findByIdAndUpdate({ _id }, {
-                $push: { comment: dbcomment.id }
-            }, { new: true });
-        })
+        const createComment = await Comment.create(comments);
+        const createdComment = await Post.findOneAndUpdate(
+            { _id: id },
+            { $push: { comments: createComment._id } },
+            { new: true }
+        );
         callback(null, {
             headers: {
                 "Content-Type": "application/json",
@@ -105,7 +105,7 @@ module.exports.postCommentAtPost = async (event, context, callback) => {
                 "Access-Control-Allow-Headers": "*"
             },
             statusCode: 200,
-            body: JSON.stringify(comment),
+            body: JSON.stringify(createdComment),
         });
     } catch (error) {
         returnError(error);
