@@ -6,13 +6,21 @@ provider:
   region: eu-central-1
   memorySize: 128
 
-functions: 
+functions:
   getUsers:
     handler: handlers/handlerTest.getUsers
     events:
-      - http: 
+      - http:
           path: user
           method: get
+          cors: true
+
+  postPostAtUser:
+    handler: handlers/handlerTest.postPostAtUser
+    events:
+      - http:
+          path: post/user/{id}
+          method: post
           cors: true
 
 plugins:

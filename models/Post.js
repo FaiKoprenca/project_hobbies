@@ -26,7 +26,7 @@ const PostSchema = new Schema(
     },
     startTime: {
       type: String,
-      required: true,
+      //required: true,
     },
     endTime: {
       type: String,
