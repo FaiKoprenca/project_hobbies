@@ -1,19 +1,16 @@
-const connectToDatabase = require('../database/db');
-const User = require('../models/User');
-const Post = require('../models/Post');
-const Comment = require('../models/Comments');
-const Like = require('../models/Like');
+const connectToDatabase = require('../../database/db');
+const Comment = require('../../models/Comments');
 
-module.exports.getCommentsAtPost = async (event, context, callback) => {
+module.exports.getOneComment = async (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;
     const id = event.pathParameters.id;
   
     try {
       await connectToDatabase();
-      const post = await Post.findById(id).populate("comment");
+      const comment = await Comment.findById(id);
   
-      if (!post) {
-        callback(null, createErrorResponse(404, `No post found with id: ${id}`));
+      if (!comment) {
+        callback(null, createErrorResponse(404, `No comment found with id: ${id}`));
       }
   
       return {
@@ -25,7 +22,7 @@ module.exports.getCommentsAtPost = async (event, context, callback) => {
           "Access-Control-Allow-Headers" : "*"
       },
         statusCode: 200,
-        body: JSON.stringify(post.comment),
+        body: JSON.stringify(comment),
       };
     } catch (error) {
       returnError(error);

@@ -1,8 +1,6 @@
-const connectToDatabase = require('../database/db');
-const User = require('../models/User');
-const Post = require('../models/Post');
-const Comment = require('../models/Comments');
-const Like = require('../models/Like');
+const connectToDatabase = require('../../database/db');
+const User = require('../../models/User');
+const Post = require('../../models/Post');
 
 module.exports.postPostAtUser = async (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;

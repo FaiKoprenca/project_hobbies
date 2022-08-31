@@ -1,19 +1,20 @@
 const connectToDatabase = require('../../database/db');
 const User = require('../../models/User');
 const Post = require('../../models/Post');
+const Comment = require('../../models/Comments');
 
-
-
-module.exports.deletePost = async (event, context, callback) => {
+module.exports.getCommentsAtPost = async (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;
     const id = event.pathParameters.id;
   
     try {
       await connectToDatabase();
-      const post = await Post.findByIdAndRemove(id);
+      const post = await Post.findById(id).populate("comment");
+  
       if (!post) {
-        callback(null, createErrorResponse(404, `No post found with id: ${id}, cannot delete`));
+        callback(null, createErrorResponse(404, `No post found with id: ${id}`));
       }
+  
       return {
         headers: {
           "Content-Type" : "application/json",
@@ -23,11 +24,9 @@ module.exports.deletePost = async (event, context, callback) => {
           "Access-Control-Allow-Headers" : "*"
       },
         statusCode: 200,
-        body: JSON.stringify({
-          message: `Removed post with id: ${post._id}`,
-          post,
-        }),
+        body: JSON.stringify(post.comment),
       };
     } catch (error) {
-      return(error);
-}};
+      returnError(error);
+    }
+};

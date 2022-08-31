@@ -1,8 +1,7 @@
-const connectToDatabase = require('../database/db');
-const User = require('../models/User');
-const Post = require('../models/Post');
-const Comment = require('../models/Comments');
-const Like = require('../models/Like');
+const connectToDatabase = require('../../database/db');
+const User = require('../../models/User');
+const Post = require('../../models/Post');
+
 
 module.exports.getPostsByUserId = async (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;
@@ -28,6 +27,6 @@ module.exports.getPostsByUserId = async (event, context, callback) => {
         body: JSON.stringify(user.posts),
       };
     } catch (error) {
-      returnError(error);
+      return(error);
     }
 };

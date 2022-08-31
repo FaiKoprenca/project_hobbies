@@ -10,7 +10,7 @@ module.exports.getUsers = async (event, context, callback) => {
         await connectToDatabase();
         const users = await User.find();
         if (!users) {
-            callback(null, createErrorResponse(404, 'No Users Found.'));
+            callback(null, createErrorResponse(404, 'No Users Found.'));    //TODO research to change callback
         }
 
         callback(null, {
@@ -84,7 +84,7 @@ module.exports.postUser = async (event, context, callback) => {
         body: JSON.stringify(newUser),
       };
     } catch (error) {
-      returnError(error);
+      return(error);
     }
   };
 

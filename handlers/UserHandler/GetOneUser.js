@@ -8,7 +8,8 @@ module.exports.getUserById = async (event, context, callback) => {
   
     try {
       await connectToDatabase();
-      const user = await User.findById(id).populate("posts");
+      const user = await User.findById(id)
+      //.populate("posts");
   
       if (!user) {
         callback(null, createErrorResponse(404, `No user found with id: ${id}`));
@@ -26,6 +27,6 @@ module.exports.getUserById = async (event, context, callback) => {
         body: JSON.stringify(user),
       };
     } catch (error) {
-      returnError(error);
+      return(error);
     }
 };
