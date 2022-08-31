@@ -72,7 +72,7 @@ functions:
           cors: true
 
   deletePost:
-    handler: handlers/handlerTest.deletePost
+    handler: handlers/PostHandler/DeletePost.deletePost
     events:
       - http:
           path: post/delete/{id}
