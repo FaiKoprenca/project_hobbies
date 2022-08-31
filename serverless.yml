@@ -48,7 +48,7 @@ functions:
           cors: true    
 
   postPostAtUser:
-    handler: handlers/handlerTest.postPostAtUser
+    handler: handlers/PostHandler/CreatePostAtUser.postPostAtUser
     events:
       - http:
           path: post/user/{id}
@@ -56,7 +56,7 @@ functions:
           cors: true
 
   getPostsByUserId:
-    handler: handlers/handlerTest.getPostsByUserId
+    handler: handlers/PostHandler/GetPostByUserId.getPostsByUserId
     events:
       - http:
           path: posts/user/{id}
@@ -64,7 +64,7 @@ functions:
           cors: true
 
   getOnePost:
-    handler: handlers/handlerTest.getOnePost
+    handler: handlers/PostHandler/GetOnePost.getOnePost
     events:
       - http:
           path: post/{id}
@@ -72,7 +72,7 @@ functions:
           cors: true
 
   updatePost:
-    handler: handlers/handlerTest.updatePost
+    handler: handlers/PostHandler/UpdatePost.updatePost
     events:
       - http:
           path: post/put/{id}
@@ -80,7 +80,7 @@ functions:
           cors: true
 
   deletePost:
-    handler: handlers/handlerTest.deletePost
+    handler: handlers/PostHandler/DeletePost.deletePost
     events:
       - http:
           path: post/delete/{id}
