@@ -15,6 +15,38 @@ functions:
           method: get
           cors: true
 
+  getUserById:
+    handler: handlers/handlerTest.getUserById
+    events:
+      - http:
+          path: user/{id}
+          method: get
+          cors: true
+
+  postUser:
+    handler: handlers/handlerTest.postUser
+    events:
+      - http:
+          path: user
+          method: post
+          cors: true
+
+  updateUser:
+    handler: handlers/handlerTest.updateUser
+    events:
+      - http:
+          path: user/put/{id}
+          method: put
+          cors: true    
+
+  deleteUser:
+    handler: handlers/handlerTest.deleteUser
+    events:
+      - http:
+          path: user/delete/{id}
+          method: delete
+          cors: true    
+
   postPostAtUser:
     handler: handlers/handlerTest.postPostAtUser
     events:
@@ -23,13 +55,101 @@ functions:
           method: post
           cors: true
 
+  getPostsByUserId:
+    handler: handlers/handlerTest.getPostsByUserId
+    events:
+      - http:
+          path: posts/user/{id}
+          method: get
+          cors: true
+
+  getOnePost:
+    handler: handlers/handlerTest.getOnePost
+    events:
+      - http:
+          path: post/{id}
+          method: get
+          cors: true
+
+  updatePost:
+    handler: handlers/handlerTest.updatePost
+    events:
+      - http:
+          path: post/put/{id}
+          method: put
+          cors: true
+
+  deletePost:
+    handler: handlers/handlerTest.deletePost
+    events:
+      - http:
+          path: post/delete/{id}
+          method: delete
+          cors: true
+
   postCommentAtPost:
     handler: handlers/handlerTest.postCommentAtPost
     events:
       - http:
-          path: post/comment/user/{id}
+          path: comment/post/{id}
           method: post
           cors: true   
+
+  getCommentsAtPost:
+    handler: handlers/handlerTest.getCommentsAtPost
+    events:
+      - http:
+          path: comments/post/{id}
+          method: get
+          cors: true
+
+  getOneComment:
+    handler: handlers/handlerTest.getOneComment
+    events:
+      - http:
+          path: comment/{id}
+          method: get
+          cors: true
+
+  updateComment:
+    handler: handlers/handlerTest.updateComment
+    events:
+      - http:
+          path: comment/put/{id}
+          method: put
+          cors: true
+
+  deleteComment:
+    handler: handlers/handlerTest.deleteComment
+    events:
+      - http:
+          path: comment/delete/{id}
+          method: delete
+          cors: true
+
+  getCommentsByUserId:
+    handler: handlers/handlerTest.getCommentsByUserId
+    events:
+      - http:
+          path: comments/user/{id}
+          method: get
+          cors: true
+
+  postLikeAtPost:
+    handler: handlers/handlerTest.postLikeAtPost
+    events:
+      - http:
+          path: like/post/{id}
+          method: post
+          cors: true
+
+  postLikeAtComment:
+    handler: handlers/handlerTest.postLikeAtComment
+    events:
+      - http:
+          path: like/comment/{id}
+          method: post
+          cors: true
 
 plugins:
   - serverless-offline

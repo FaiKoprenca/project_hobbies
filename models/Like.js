@@ -3,7 +3,10 @@ const Schema = mongoose.Schema;
 
 
 const likeSchema = new Schema({
-
+    state: {
+        type: Boolean,
+        default: false
+    },
     userId: {
         type: Schema.Types.ObjectId,
         ref: 'User'
@@ -15,6 +18,10 @@ const likeSchema = new Schema({
     postId: {
         type: Schema.Types.ObjectId,
         ref: 'Post'
+    },
+    commentId: {
+        type: Schema.Types.ObjectId,
+        ref: 'Comment'
     }
 
 })
