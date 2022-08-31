@@ -8,7 +8,7 @@ provider:
 
 functions:
   getUsers:
-    handler: handlers/handlerTest.getUsers
+    handler: handlers/UserHandler/GetUsers.getUsers
     events:
       - http:
           path: user
@@ -16,23 +16,15 @@ functions:
           cors: true
 
   getUserById:
-    handler: handlers/handlerTest.getUserById
+    handler: handlers/UserHandler/GetOneUser.getUserById
     events:
       - http:
           path: user/{id}
           method: get
           cors: true
 
-  postUser:
-    handler: handlers/handlerTest.postUser
-    events:
-      - http:
-          path: user
-          method: post
-          cors: true
-
   updateUser:
-    handler: handlers/handlerTest.updateUser
+    handler: handlers/UserHandler/GetOneUser.updateUser
     events:
       - http:
           path: user/put/{id}
@@ -40,7 +32,7 @@ functions:
           cors: true    
 
   deleteUser:
-    handler: handlers/handlerTest.deleteUser
+    handler: handlers/UserHandler/DeleteUser.deleteUser
     events:
       - http:
           path: user/delete/{id}
