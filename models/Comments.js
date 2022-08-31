@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const commentSchema = new mongoose.Schema({
-    /*userId: {
+    userId: {
         type: Schema.Types.ObjectId,
         ref: 'User'
-    },*/
+    },
     date: {
         type: Date,
         default: Date.now()
