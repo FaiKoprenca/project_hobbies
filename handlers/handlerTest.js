@@ -542,5 +542,3 @@ module.exports.postLikeAtPost = async (event, context, callback) => {
         returnError(error);
     }
 };
-
-
