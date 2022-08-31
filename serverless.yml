@@ -80,7 +80,7 @@ functions:
           cors: true
 
   deletePost:
-    handler: handlers/handlerTest.deletePost
+    handler: handlers/CommentsHandler/
     events:
       - http:
           path: post/delete/{id}
@@ -88,7 +88,7 @@ functions:
           cors: true
 
   postCommentAtPost:
-    handler: handlers/handlerTest.postCommentAtPost
+    handler: handlers/CommentsHandler/PostCommentAtPost.postCommentAtPost
     events:
       - http:
           path: comment/post/{id}
@@ -96,7 +96,7 @@ functions:
           cors: true   
 
   getCommentsAtPost:
-    handler: handlers/handlerTest.getCommentsAtPost
+    handler: handlers/CommentsHandler/GetCommentsAtPost.getCommentsAtPost
     events:
       - http:
           path: comments/post/{id}
@@ -104,7 +104,7 @@ functions:
           cors: true
 
   getOneComment:
-    handler: handlers/handlerTest.getOneComment
+    handler: handlers/CommentsHandler/GetOneComment.getOneComment
     events:
       - http:
           path: comment/{id}
@@ -112,7 +112,7 @@ functions:
           cors: true
 
   updateComment:
-    handler: handlers/handlerTest.updateComment
+    handler: handlers/CommentsHandler/UpdateComment.updateComment
     events:
       - http:
           path: comment/put/{id}
@@ -120,7 +120,7 @@ functions:
           cors: true
 
   deleteComment:
-    handler: handlers/handlerTest.deleteComment
+    handler: handlers/CommentsHandler/DeleteComments.deleteComment
     events:
       - http:
           path: comment/delete/{id}
@@ -128,7 +128,7 @@ functions:
           cors: true
 
   getCommentsByUserId:
-    handler: handlers/handlerTest.getCommentsByUserId
+    handler: handlers/CommentsHandler/GetCommentsByUserId.getCommentsByUserId
     events:
       - http:
           path: comments/user/{id}

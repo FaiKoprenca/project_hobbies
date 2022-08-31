@@ -478,7 +478,7 @@ module.exports.deleteComment = async (event, context, callback) => {
       returnError(error);
 }};
 
-/*module.exports.getCommentsByUserId = async (event, context, callback) => {
+module.exports.getCommentsByUserId = async (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;
     const id = event.pathParameters.id;
   
@@ -504,7 +504,7 @@ module.exports.deleteComment = async (event, context, callback) => {
     } catch (error) {
       returnError(error);
     }
-};*/
+};
 
 
 module.exports.postLikeAtPost = async (event, context, callback) => {
