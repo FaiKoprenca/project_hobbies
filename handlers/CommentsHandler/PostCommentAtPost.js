@@ -3,7 +3,7 @@ const User = require('../../models/User');
 const Post = require('../../models/Post');
 const Comment = require('../../models/Comments');
 
-module.exports.postCommentAtPost = async (event, context, callback) => {
+module.exports.postCommentAtPost = async (event, context, callback) => {    //TODO add user id at comment
     context.callbackWaitsForEmptyEventLoop = false;
     const id = event.pathParameters.id;
 
@@ -25,6 +25,9 @@ module.exports.postCommentAtPost = async (event, context, callback) => {
             { $push: { comment: createComment._id } },
             { new: true }
         );
+        /*const finalComment = await User.findOneAndUpdate(
+
+        )*/
         callback(null, {
             headers: {
                 "Content-Type": "application/json",

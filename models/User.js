@@ -31,6 +31,14 @@ const UserSchema = new mongoose.Schema(
         ref: "Post",
       },
     ],
+    comment: [{
+      type: Schema.Types.ObjectId,
+      ref: 'Comment'
+  }],
+    /*likes: {
+      type: Schema.Types.ObjectId,
+      ref: "Like"
+    }*/
   },
   {
     timeStamps: true,
