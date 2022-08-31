@@ -135,6 +135,14 @@ functions:
           method: get
           cors: true
 
+  postLikeAtPost:
+    handler: handlers/handlerTest.postLikeAtPost
+    events:
+      - http:
+          path: like/post/{id}
+          method: post
+          cors: true
+
   postLikeAtComment:
     handler: handlers/handlerTest.postLikeAtComment
     events:
@@ -143,11 +151,19 @@ functions:
           method: post
           cors: true
 
-  postLikeAtPost:
-    handler: handlers/handlerTest.postLikeAtPost
+  getAllUserFollowers:
+    handler: handlers/FollowHandler/GetAllUserFollowers.getAllUserFollowers
     events:
       - http:
-          path: like/user/{id}
+          path: follow/user/{id}
+          method: get
+          cors: true
+
+  postFollowerAtUser:
+    handler: handlers/FollowHandler/PostFollowerAtUser.postFollowerAtUser
+    events:
+      - http:
+          path: follow/user/{id}
           method: post
           cors: true
 
