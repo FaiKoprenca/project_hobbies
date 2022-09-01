@@ -61,16 +61,21 @@ module.exports.getUserById = async (event, context, callback) => {
 module.exports.postUser = async (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
 
-  const { username, location, bio } = JSON.parse(event.body);
+  const userID = event.pathParameters._id;  //TODO the logged user id 
 
-  const user = new User({
-    username,
-    location,
-    bio
-  });
+  const { username, location, bio } = JSON.parse(event.body);
 
   try {
     await connectToDatabase();
+    User.init();
+    const user = new User({
+      //userId: userID,   //TODO check if error/not working and remove '//' when in frontEnd
+      username,
+      location,
+      bio,
+      //TODO posts
+    });
+
     const newUser = await User.create(user);
     return {
       headers: {
@@ -562,9 +567,9 @@ module.exports.postLikeAtPost = async (event, context, callback) => {    //TODO 
 
     const createLike = await Like.create(like);
     const addLike = await Post.findOneAndUpdate(
-      { _id: id},
-      { $push : { likes: createLike._id} },
-      { new: true}
+      { _id: id },
+      { $push: { likes: createLike._id } },
+      { new: true }
     )
 
     return {
