@@ -4,7 +4,7 @@ const Post = require('../../models/Post');
 
 module.exports.postPostAtUser = async (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;
-    const id = event.pathParameters.id;
+    const id = event.pathParameters.id;     //TODO the logged in user id
 
     const { username, text, tags/*, date, startTime, endTime,*/, limit } = JSON.parse(
         event.body

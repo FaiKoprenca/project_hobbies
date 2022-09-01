@@ -546,7 +546,7 @@ module.exports.getCommentsByUserId = async (event, context, callback) => {
   }
 };*/
 
-module.exports.postLikeAtPost = async (event, context, callback) => {
+module.exports.postLikeAtPost = async (event, context, callback) => {    //TODO add like at a post fix 
   context.callbackWaitsForEmptyEventLoop = false;
   const id = event.pathParameters.id;
 
