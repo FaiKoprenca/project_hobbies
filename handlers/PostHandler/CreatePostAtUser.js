@@ -1,10 +1,11 @@
 const connectToDatabase = require('../../database/db');
 const User = require('../../models/User');
 const Post = require('../../models/Post');
+var ObjectId = require('mongodb').ObjectId;
 
 module.exports.postPostAtUser = async (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;
-    const id = event.pathParameters.id;     //TODO the logged in user id
+    const id = event.pathParameters.id;
 
     const { username, text, tags/*, date, startTime, endTime,*/, limit } = JSON.parse(
         event.body
@@ -16,9 +17,9 @@ module.exports.postPostAtUser = async (event, context, callback) => {
         text,
         tags,
         /*date,
-        startTime,
+        startTime,  
         endTime,*/
-        limit        
+        limit
     });
 
     try {
@@ -45,3 +46,48 @@ module.exports.postPostAtUser = async (event, context, callback) => {
         returnError(error);
     }
 };
+
+/*module.exports.postPostAtUserCognitoTry = async (event, context, callback) => {
+    context.callbackWaitsForEmptyEventLoop = false;
+    const id = event.pathParameters.id;
+
+
+    const reqBody = JSON.parse(event.body)
+    const postId = reqBody._id;
+
+    console.log(postId);
+
+    //TODO the logged in user id
+    const userId = event.pathParameters.id;
+
+    const post = new Post({
+        username,
+        text,
+        tags,
+        limit
+    });
+
+    try {
+        await connectToDatabase();
+        //console.log(post);
+        const createPost = await Post.create(post);
+        const createdPost = await User.findOneAndUpdate(
+            { _id: id },
+            { $push: { posts: createPost._id } },
+            { new: true }
+        );
+        callback(null, {
+            headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*",
+                "Allow": "GET, OPTIONS, POST",
+                "Access-Control-Allow-Methods": "GET, OPTIONS, POST",
+                "Access-Control-Allow-Headers": "*"
+            },
+            statusCode: 200,
+            body: JSON.stringify(createdPost),
+        });
+    } catch (error) {
+        returnError(error);
+    }
+};*/
