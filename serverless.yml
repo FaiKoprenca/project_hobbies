@@ -190,6 +190,5 @@ functions:
           path: payment/premium
           method: get
           cors: true
-
 plugins:
   - serverless-offline
