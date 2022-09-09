@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const PostSchema = new mongoose.Schema(
   {
-    /*userId: {
+    /*userId: {            //TODO In frontEnd get this from  the loggen in user 
       type: Schema.Types.ObjectId,
       ref: "users",
     },*/
