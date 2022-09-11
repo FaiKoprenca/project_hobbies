@@ -1,5 +1,5 @@
 const validator = require('validator');
-const validText = require('./valid_text');
+const validText = require('./validText');
 
 module.exports.validateCommentInput = async(data)=>{
     let errors = {};

@@ -2,7 +2,7 @@ const connectToDatabase = require("../../database/db");
 const User = require("../../models/User");
 const Post = require("../../models/Post");
 const Comment = require("../../models/Comments");
-const validateCommentInput = require("../../Validations/validate_comments");
+const validateCommentInput = require("../../Validations/validateComments");
 
 module.exports.postCommentAtPost = async (event, context, callback) => {
   //TODO add user id at comment

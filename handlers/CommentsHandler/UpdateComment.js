@@ -1,6 +1,6 @@
 const connectToDatabase = require("../../database/db");
 const Comment = require("../../models/Comments");
-const validateCommentInput = require("../../Validations/validate_comments");
+const validateCommentInput = require("../../Validations/validateComments");
 
 module.exports.updateComment = async (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
