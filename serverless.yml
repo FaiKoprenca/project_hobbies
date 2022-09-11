@@ -166,23 +166,7 @@ functions:
           path: follow/user/{id}
           method: post
           cors: true
-
-  standartPlan:
-    handler: handlers/PaymentHandler/StandartPlan.standartPlan
-    events:
-      - http:
-          path: payment/standart
-          method: get
-          cors: true
-
-  basicPlan:
-    handler: handlers/PaymentHandler/BasicPlan.basicPlan
-    events:
-      - http:
-          path: payment/basic
-          method: get
-          cors: true
-
+          
   premiumPlan:
     handler: handlers/PaymentHandler/PremiumPlan.premiumPlan
     events:
