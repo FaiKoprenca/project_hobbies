@@ -1,6 +1,6 @@
 const connectToDatabase = require("../../database/db");
 const User = require("../../models/User");
-
+//TODO Save CognitoID
 module.exports.postFollowerAtUser = async (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
   const id = event.pathParameters.id;

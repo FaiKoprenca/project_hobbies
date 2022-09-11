@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const UserSchema = new mongoose.Schema(
   {
+    //TODO Cognito ID 
     userId: {
       type: String
     },

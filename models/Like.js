@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 
 const likeSchema = new Schema(
     {
+        //TODO Finalize if we are using useState or to show who liked the post 
         state: {
             type: Boolean,
             default: false
