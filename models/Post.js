@@ -16,8 +16,14 @@ const PostSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    //maybe another locationTag and sportsTag model for queries
     tags: [
       {
+        /*type: Schema.Types.ObjectId,
+        ref: "locationTag"
+        type: Schema.Types.ObjectId,
+        ref: "sportsTag"*/
+        //add to database predefined locations, sports
         type: String,
       },
     ],
