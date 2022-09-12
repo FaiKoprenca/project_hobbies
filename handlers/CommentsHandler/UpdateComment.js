@@ -37,6 +37,6 @@ module.exports.updateComment = async (event, context, callback) => {
       body: JSON.stringify(newComment),
     };
   } catch (error) {
-    return error;
+    return(error);
   }
 };

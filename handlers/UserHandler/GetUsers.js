@@ -23,6 +23,6 @@ module.exports.getUsers = async (event, context, callback) => {
             body: JSON.stringify(users),
         });
     } catch (error) {
-        returnError(error);
+        return(error);
     }
 };

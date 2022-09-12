@@ -25,6 +25,6 @@ module.exports.getOneComment = async (event, context, callback) => {
         body: JSON.stringify(comment),
       };
     } catch (error) {
-      returnError(error);
+      return(error);
     }
 };

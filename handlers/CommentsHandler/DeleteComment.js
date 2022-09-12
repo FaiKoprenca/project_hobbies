@@ -26,5 +26,5 @@ module.exports.deleteComment = async (event, context, callback) => {
         }),
       };
     } catch (error) {
-      returnError(error);
+      return(error);
 }};

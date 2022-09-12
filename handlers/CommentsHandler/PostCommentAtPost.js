@@ -46,6 +46,6 @@ module.exports.postCommentAtPost = async (event, context, callback) => {
       body: JSON.stringify(createdComment),
     });
   } catch (error) {
-    returnError(error);
+    return(error);
   }
 };

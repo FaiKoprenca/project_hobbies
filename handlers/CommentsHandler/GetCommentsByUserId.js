@@ -30,6 +30,6 @@ module.exports.getCommentsByUserId = async (event, context, callback) => {
         body: JSON.stringify(user.posts.comment),
       };
     } catch (error) {
-      returnError(error);
+      return(error);
     }
 };

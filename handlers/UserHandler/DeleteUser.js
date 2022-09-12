@@ -26,5 +26,5 @@ module.exports.deleteUser = async (event, context, callback) => {
         }),
       };
     } catch (error) {
-      returnError(error);
+      return(error);
 }};
