@@ -4,8 +4,8 @@ const Schema = mongoose.Schema;
 const PostSchema = new mongoose.Schema(
   {
     //TODO Cognito ID
-    postCognitoId:{
-      type:String,
+    postCognitoId: {
+      type: String,
     },
     /*userId: {   
       type: Schema.Types.ObjectId,
@@ -21,13 +21,14 @@ const PostSchema = new mongoose.Schema(
     },
     //maybe another locationTag and sportsTag model for queries
     tags: [
+      //{type:String}
       {
-        /*type: Schema.Types.ObjectId,
-        ref: "locationTag"
         type: Schema.Types.ObjectId,
-        ref: "sportsTag"*/
-        //add to database predefined locations, sports
-        type: String,
+        ref: "locationTag",
+      },
+      {
+        type: Schema.Types.ObjectId,
+        ref: "sportsTag",
       },
     ],
     date: {
@@ -40,25 +41,27 @@ const PostSchema = new mongoose.Schema(
     },
     endTime: {
       type: String,
-    }, 
+    },
     limit: {
       type: Number,
       required: true,
     },
     likes: {
       type: Schema.Types.ObjectId,
-      ref: "Like"
+      ref: "Like",
     },
-    comment: [{
+    comment: [
+      {
         type: Schema.Types.ObjectId,
-        ref: 'Comment'
-    }],
+        ref: "Comment",
+      },
+    ],
     history: [
       {
         date: { type: Date, default: Date.now() },
         userId: { type: Schema.Types.ObjectId, ref: "User" },
       },
-    ],//front end type of event: indoor or outdoor
+    ], //front end type of event: indoor or outdoor
   },
   {
     timeStamps: true,
