@@ -39,6 +39,6 @@ module.exports.updatePost = async (event, context, callback) => {
       body: JSON.stringify(updatePosts),
     };
   } catch (error) {
-    returnError(error);
+    return(error);
   }
 };

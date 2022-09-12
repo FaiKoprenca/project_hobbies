@@ -41,7 +41,7 @@ module.exports.postPostAtUser = async (event, context, callback) => {
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
-        Allow: "GET, OPTIONS, POST",
+        "Allow": "GET, OPTIONS, POST",
         "Access-Control-Allow-Methods": "GET, OPTIONS, POST",
         "Access-Control-Allow-Headers": "*",
       },
@@ -49,7 +49,7 @@ module.exports.postPostAtUser = async (event, context, callback) => {
       body: JSON.stringify(createdPost),
     });
   } catch (error) {
-    returnError(error);
+    return(error);
   }
 };
 

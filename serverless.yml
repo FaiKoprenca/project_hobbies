@@ -92,7 +92,7 @@ functions:
     events:
       - http:
           path: post/put/{id}
-          method: put
+          method: patch
           cors: true
 
   deletePost:
@@ -132,7 +132,7 @@ functions:
     events:
       - http:
           path: comment/put/{id}
-          method: put
+          method: patch
           cors: true
 
   deleteComment:
