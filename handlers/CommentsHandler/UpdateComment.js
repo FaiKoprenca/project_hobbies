@@ -10,7 +10,7 @@ module.exports.updateComment = async (event, context, callback) => {
 
     const reqBody = JSON.parse(event.body);
 
-    const updateComment = await Comment.updateOne(
+    const updateComments = await Comment.updateOne(
       {
         _id: event.pathParameters.id,
       },
@@ -28,7 +28,7 @@ module.exports.updateComment = async (event, context, callback) => {
         "Access-Control-Allow-Headers": "*",
       },
       statusCode: 200,
-      body: JSON.stringify(updateComment),
+      body: JSON.stringify(updateComments),
     };
   } catch (error) {
     return(error);
