@@ -2,18 +2,18 @@ const connectToDatabase = require("../../database/db");
 const User = require("../../models/User");
 const Post = require("../../models/Post");
 var ObjectId = require("mongodb").ObjectId;
-const validatePostInput = require("../../Validations/validateCreatePost");
+//const validateCreatePost = require("../../Validations/validateCreatePost");
 
 module.exports.postPostAtUser = async (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
   const id = event.pathParameters.id;
+  //TODO
+  // const { errors, isValid } = validateCreatePost(event.body);
+  // if (!isValid) {
+  //   return res.status(400).json(errors);
+  // }
 
-  const { errors, isValid } = validatePostInput(event.body);
-  if (!isValid) {
-    return res.status(400).json(errors);
-  }
-
-  const { username, text, tags /*, date, startTime, endTime,*/, limit } =
+  const { username, text, tags /*, date, startTime, endTime,*/ ,limit } =
     JSON.parse(event.body);
 
   const post = new Post({

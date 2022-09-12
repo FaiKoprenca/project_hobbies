@@ -1,7 +1,7 @@
 const validator = require("validator");
 const validText = require("./validText");
 
-module.exports.validatePostInput = async (data) => {
+module.exports = function validateCreatePost(data) {
   let errors = {};
 
   data.text = validText(data.text) ? data.text : "";

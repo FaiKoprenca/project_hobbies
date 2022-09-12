@@ -1,16 +1,16 @@
 const connectToDatabase = require("../../database/db");
 const User = require("../../models/User");
 const Post = require("../../models/Post");
-const validatePostUpdate = require("../../Validations/validateUpdatePost");
+//const validatePostUpdate = require("../../Validations/validateUpdatePost");
 
 module.exports.updatePost = async (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
   const data = JSON.parse(event.body);
-
-  const { errors, isValid } = validatePostUpdate(event.body);
-  if (!isValid) {
-    return res.status(400).json(errors);
-  }
+  //TODO
+  // const { errors, isValid } = validatePostUpdate(event.body);
+  // if (!isValid) {
+  //   return res.status(400).json(errors);
+  // }
 
   const { username, text, tags, limit } = data;
 

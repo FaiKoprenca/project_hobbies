@@ -24,11 +24,11 @@ const PostSchema = new mongoose.Schema(
       //{type:String}
       {
         type: Schema.Types.ObjectId,
-        ref: "locationTag",
+        ref: "LocationTag",
       },
       {
         type: Schema.Types.ObjectId,
-        ref: "sportsTag",
+        ref: "SportsTag",
       },
     ],
     date: {

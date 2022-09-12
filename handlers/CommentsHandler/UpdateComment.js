@@ -1,16 +1,16 @@
 const connectToDatabase = require("../../database/db");
 const Comment = require("../../models/Comments");
-const validateCommentInput = require("../../Validations/validateComments");
+//const validateCommentInput = require("../../Validations/validateComments");
 
 module.exports.updateComment = async (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
   const data = JSON.parse(event.body);
+  //TODO
+  // const { errors, isValid } = validateCommentInput(event.body);
 
-  const { errors, isValid } = validateCommentInput(event.body);
-
-  if (!isValid) {
-    return res.status(400).json(errors);
-  }
+  // if (!isValid) {
+  //   return res.status(400).json(errors);
+  // }
 
   const { text } = data;
 

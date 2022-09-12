@@ -8,7 +8,7 @@ module.exports.validatePostUpdate = async (data) => {
 
   if (
     data.text !== undefined &&
-    !validator.isLendth(data.text, { min: 1, max: 1000 })
+    !validator.isLength(data.text, { min: 1, max: 1000 })
   ) {
     errors.text = "Post must be between 1 and 1000 characters";
   }

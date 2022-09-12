@@ -2,18 +2,18 @@ const connectToDatabase = require("../../database/db");
 const User = require("../../models/User");
 const Post = require("../../models/Post");
 const Comment = require("../../models/Comments");
-const validateCommentInput = require("../../Validations/validateComments");
+//const validateCommentInput = require("../../Validations/validateComments");
 
 module.exports.postCommentAtPost = async (event, context, callback) => {
   //TODO add user id at comment
   context.callbackWaitsForEmptyEventLoop = false;
   const id = event.pathParameters.id;
+  //TODO
+  // const { errors, isValid } = validateCommentInput(event.body);
 
-  const { errors, isValid } = validateCommentInput(event.body);
-
-  if (!isValid) {
-    return res.status(400).json(errors);
-  }
+  // if (!isValid) {
+  //   return res.status(400).json(errors);
+  // }
 
   const { text } = JSON.parse(event.body);
 
