@@ -32,11 +32,11 @@ functions:
           cors: true
 
   updateUser:
-    handler: handlers/UserHandler/GetOneUser.updateUser
+    handler: handlers/UserHandler/UpdateUser.updateUser
     events:
       - http:
           path: user/put/{id}
-          method: put
+          method: patch
           cors: true    
 
   deleteUser:
