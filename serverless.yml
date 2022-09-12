@@ -79,6 +79,14 @@ functions:
           method: get
           cors: true
 
+  getPostsByLocation:
+    handler: handlers/PostHandler/GetPostsByLocation.getPostsByLocation
+    events:
+      - http:
+          path: bylocation
+          method: get
+          cors: true
+
   updatePost:
     handler: handlers/PostHandler/UpdatePost.updatePost
     events:
