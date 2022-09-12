@@ -214,7 +214,29 @@ functions:
           path: locations/{id}
           method: delete
           cors: true
- 
 
+  getSports:
+    handler: handlers/SportsHandler/GetSports.getSports
+    events:
+      - http:
+          path: sports
+          method: get
+          cors: true
+
+  getOneSport:
+    handler: handlers/SportsHandler/GetOneSport.getOneSport
+    events:
+      - http:
+          path: sports/{id}
+          method: get
+          cors: true
+
+  deleteSport:
+    handler: handlers/SportsHandler/DeleteSport.deleteSport
+    events:
+      - http:
+          path: sports/{id}
+          method: delete
+          cors: true 
 plugins:
   - serverless-offline

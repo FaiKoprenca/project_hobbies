@@ -1,16 +1,17 @@
 const connectToDatabase = require("../../database/db");
 const SportsTag = require('../../models/SportsTag');
 
-module.exports.getSports = async (event, context, callback) => {
+module.exports.deleteSport = async (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;
+    const id = event.pathParameters.id;
+  
     try {
       await connectToDatabase();
-      const sports = await SportsTag.find();
-      if (!sports) {
-        callback(null, createErrorResponse(404, 'No sports Found.'));    //TODO research to change callback
+      const sport = await SportsTag.findByIdAndRemove(id);
+      if (!sport) {
+        callback(null, createErrorResponse(404, `No sport found with id: ${id}, cannot delete`));
       }
-  
-      callback(null, {
+      return {
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
@@ -19,10 +20,12 @@ module.exports.getSports = async (event, context, callback) => {
           "Access-Control-Allow-Headers": "*"
         },
         statusCode: 200,
-        body: JSON.stringify(sports),
-      });
+        body: JSON.stringify({
+          message: `Removed sport with id: ${sport._id}`,
+          sport,
+        }),
+      };
     } catch (error) {
       return(error);
     }
   };
-  
