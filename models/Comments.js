@@ -4,6 +4,9 @@ const Schema = mongoose.Schema;
 const commentSchema = new mongoose.Schema({
     
     //TODO Cognito ID
+    commentCognitoId:{
+        type:String,
+    },
     userId: {
         type: Schema.Types.ObjectId,
         ref: 'User'
