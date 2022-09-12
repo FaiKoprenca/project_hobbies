@@ -174,5 +174,22 @@ functions:
           path: payment/premium
           method: get
           cors: true
+
+  addLocations:
+    handler: handlers/PredefinedHandler/AddLocations.addLocations
+    events:
+      - http:
+          path: addlocations
+          method: post
+          cors: true
+
+  addSports:
+    handler: handlers/PredefinedHandler/AddSports.addSports
+    events:
+      - http:
+          path: addsports
+          method: post
+          cors: true
+
 plugins:
   - serverless-offline
