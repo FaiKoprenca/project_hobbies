@@ -191,5 +191,30 @@ functions:
           method: post
           cors: true
 
+  getLocations:
+    handler: handlers/LocationHandler/GetLocations.getLocations
+    events:
+      - http:
+          path: locations
+          method: get
+          cors: true
+
+  getOneLocation:
+    handler: handlers/LocationHandler/GetOneLocation.getOneLocation
+    events:
+      - http:
+          path: locations/{id}
+          method: get
+          cors: true
+
+  deleteLocation:
+    handler: handlers/LocationHandler/DeleteLocation.deleteLocation
+    events:
+      - http:
+          path: locations/{id}
+          method: delete
+          cors: true
+ 
+
 plugins:
   - serverless-offline
