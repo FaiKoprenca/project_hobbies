@@ -13,7 +13,7 @@ module.exports.postPostAtUser = async (event, context, callback) => {
   //   return res.status(400).json(errors);
   // }
 
-  const { username, text,tags, date, startTime, endTime, limit } = JSON.parse(
+  const { username, text,tags, date, startTime, limit } = JSON.parse(
     event.body
   );
 
@@ -24,7 +24,7 @@ module.exports.postPostAtUser = async (event, context, callback) => {
     tags,
     date,
     startTime,
-    endTime,
+    //endTime,
     limit,
   });
 

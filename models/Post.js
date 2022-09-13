@@ -39,9 +39,9 @@ const PostSchema = new mongoose.Schema(
       type: String,
       //required: true,
     },
-    endTime: {
+    /*endTime: {
       type: String,
-    },
+    },*/
     limit: {
       type: Number,
       required: true,
@@ -50,9 +50,15 @@ const PostSchema = new mongoose.Schema(
       type: Schema.Types.ObjectId,
       ref: "Like",
     },*/
-    likes: {
+    likes: {        //TODO     ------HANDLERS---------
       type: Number,
+      default: 0
     },
+    joined: [
+      {
+        type: String,
+      }
+    ],
     comment: [
       {
         type: Schema.Types.ObjectId,
