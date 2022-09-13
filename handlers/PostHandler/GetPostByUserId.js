@@ -12,7 +12,7 @@ module.exports.getPostsByUserId = async (event, context, callback) => {
       const user = await User.findById(id).populate("posts");
   
       if (!user) {
-        callback(null, createErrorResponse(404, `No user found with id: ${id}`));
+        callback(null, (404, `No user found with id: ${id}`));
       }
   
       return {

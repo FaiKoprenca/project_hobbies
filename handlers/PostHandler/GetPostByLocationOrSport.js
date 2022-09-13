@@ -15,7 +15,7 @@ module.exports.getPostByLocationOrSport = async (event, context, callback) => {
     const post = await Post.find({"tags":filter});
 
     if (!post) {
-      callback(null, createErrorResponse(404, "No posts Found."));
+      callback(null, (404, "No posts Found."));
     }
 
     callback(null, {

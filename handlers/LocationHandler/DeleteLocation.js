@@ -9,7 +9,7 @@ module.exports.deleteLocation = async (event, context, callback) => {
       await connectToDatabase();
       const location = await LocationTag.findByIdAndRemove(id);
       if (!location) {
-        callback(null, createErrorResponse(404, `No location found with id: ${id}, cannot delete`));
+        callback(null, (404, `No location found with id: ${id}, cannot delete`));
       }
       return {
         headers: {

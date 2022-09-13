@@ -9,7 +9,7 @@ module.exports.deleteSport = async (event, context, callback) => {
       await connectToDatabase();
       const sport = await SportsTag.findByIdAndRemove(id);
       if (!sport) {
-        callback(null, createErrorResponse(404, `No sport found with id: ${id}, cannot delete`));
+        callback(null, (404, `No sport found with id: ${id}, cannot delete`));
       }
       return {
         headers: {

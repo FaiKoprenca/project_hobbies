@@ -10,7 +10,7 @@ module.exports.getOneLocation = async (event, context, callback) => {
       const location = await LocationTag.findById(id);
   
       if (!location) {
-        callback(null, createErrorResponse(404, `No location found with id: ${id}`));
+        callback(null, (404, `No location found with id: ${id}`));
       }
   
       return {

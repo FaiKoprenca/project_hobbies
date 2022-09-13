@@ -7,7 +7,7 @@ module.exports.getLocations = async (event, context, callback) => {
       await connectToDatabase();
       const location = await LocationTag.find();
       if (!location) {
-        callback(null, createErrorResponse(404, 'No locations Found.'));    //TODO research to change callback
+        callback(null, (404, 'No locations Found.'));    //TODO research to change callback
       }
   
       callback(null, {

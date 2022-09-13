@@ -7,7 +7,7 @@ module.exports.getSports = async (event, context, callback) => {
       await connectToDatabase();
       const sports = await SportsTag.find();
       if (!sports) {
-        callback(null, createErrorResponse(404, 'No sports Found.'));    //TODO research to change callback
+        callback(null, (404, 'No sports Found.'));    //TODO research to change callback
       }
   
       callback(null, {

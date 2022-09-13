@@ -10,7 +10,7 @@ module.exports.getOneComment = async (event, context, callback) => {
       const comment = await Comment.findById(id);
   
       if (!comment) {
-        callback(null, createErrorResponse(404, `No comment found with id: ${id}`));
+        callback(null, (404, `No comment found with id: ${id}`));
       }
   
       return {

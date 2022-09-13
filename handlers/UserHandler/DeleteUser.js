@@ -9,7 +9,7 @@ module.exports.deleteUser = async (event, context, callback) => {
       await connectToDatabase();
       const user = await User.findByIdAndRemove(id);
       if (!user) {
-        callback(null, createErrorResponse(404, `No user found with id: ${id}, cannot delete`));
+        callback(null, (404, `No user found with id: ${id}, cannot delete`));
       }
       return {
         headers: {

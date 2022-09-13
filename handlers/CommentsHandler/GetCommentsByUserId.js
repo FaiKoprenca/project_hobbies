@@ -15,7 +15,7 @@ module.exports.getCommentsByUserId = async (event, context, callback) => {
       const user = await User.findById(id).populate("posts");
       const post = await user.find({posts})
       if (!user) {
-        callback(null, createErrorResponse(404, `No user found with id: ${id}`));
+        callback(null, (404, `No user found with id: ${id}`));
       }
   
       return {

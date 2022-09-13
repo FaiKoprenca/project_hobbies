@@ -12,7 +12,7 @@ module.exports.getCommentsAtPost = async (event, context, callback) => {
       const post = await Post.findById(id).populate("comment");
   
       if (!post) {
-        callback(null, createErrorResponse(404, `No post found with id: ${id}`));
+        callback(null, (404, `No post found with id: ${id}`));
       }
   
       return {

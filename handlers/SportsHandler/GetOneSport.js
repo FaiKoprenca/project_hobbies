@@ -10,7 +10,7 @@ module.exports.getOneSport = async (event, context, callback) => {
       const sports = await SportsTag.findById(id);
   
       if (!sports) {
-        callback(null, createErrorResponse(404, `No sport found with id: ${id}`));
+        callback(null, (404, `No sport found with id: ${id}`));
       }
   
       return {

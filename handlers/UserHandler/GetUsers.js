@@ -8,7 +8,7 @@ module.exports.getUsers = async (event, context, callback) => {
         await connectToDatabase();
         const users = await User.find();
         if (!users) {
-            callback(null, createErrorResponse(404, 'No Users Found.'));
+            callback(null, (404, 'No Users Found.'));
         }
 
         callback(null, {

@@ -12,7 +12,7 @@ module.exports.deletePost = async (event, context, callback) => {
       await connectToDatabase();
       const post = await Post.findByIdAndRemove(id);
       if (!post) {
-        callback(null, createErrorResponse(404, `No post found with id: ${id}, cannot delete`));
+        callback(null, (404, `No post found with id: ${id}, cannot delete`));
       }
       return {
         headers: {

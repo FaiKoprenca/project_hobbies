@@ -7,7 +7,7 @@ module.exports.getAllPosts = async (event, context, callback) => {
         await connectToDatabase();
         const post = await Post.find();
         if (!post) {
-            callback(null, createErrorResponse(404, 'No posts Found.'));
+            callback(null, (404, 'No posts Found.'));
         }
 
         callback(null, {
