@@ -2,7 +2,7 @@ const connectToDatabase = require("../../database/db");
 const Post = require("../../models/Post");
 const LocationTag = require("../../models/LocationTag");
 
-module.exports.getPostsByTag = async (event, context, callback) => {
+module.exports.getPostByLocationOrSport = async (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
 
   try {
@@ -10,7 +10,7 @@ module.exports.getPostsByTag = async (event, context, callback) => {
     //const querystring = event.queryStringParameters;
     const querystring = event.queryStringParameters;
     let filter = {};
-    filter = querystring.tags.split(',');
+    filter = querystring.tags;
 
     const post = await Post.find({"tags":filter});
 
