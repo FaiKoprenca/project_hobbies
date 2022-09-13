@@ -264,4 +264,5 @@ functions:
           cors: true 
 plugins:
   - serverless-offline
-  
+  - serverless-plugin-common-excludes
+  - serverless-plugin-include-dependencies
