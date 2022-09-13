@@ -144,6 +144,12 @@
               "LogGroupName": "/aws/lambda/hobbies-app-ffe-dev-getPostsByTag"
             }
           },
+          "GetPostByLocationOrSportLogGroup": {
+            "Type": "AWS::Logs::LogGroup",
+            "Properties": {
+              "LogGroupName": "/aws/lambda/hobbies-app-ffe-dev-getPostByLocationOrSport"
+            }
+          },
           "UpdatePostLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
@@ -354,7 +360,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/UserHandler/GetUsers.getUsers",
               "Runtime": "nodejs16.x",
@@ -379,7 +385,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/UserHandler/GetOneUser.getUserById",
               "Runtime": "nodejs16.x",
@@ -404,7 +410,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/handlerTest.postUser",
               "Runtime": "nodejs16.x",
@@ -429,7 +435,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/UserHandler/UpdateUser.updateUser",
               "Runtime": "nodejs16.x",
@@ -454,7 +460,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/UserHandler/DeleteUser.deleteUser",
               "Runtime": "nodejs16.x",
@@ -479,7 +485,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/PostHandler/CreatePostAtUser.postPostAtUser",
               "Runtime": "nodejs16.x",
@@ -504,7 +510,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/PostHandler/GetPostByUserId.getPostsByUserId",
               "Runtime": "nodejs16.x",
@@ -529,7 +535,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/PostHandler/GetOnePost.getOnePost",
               "Runtime": "nodejs16.x",
@@ -554,7 +560,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/PostHandler/GetAllPosts.getAllPosts",
               "Runtime": "nodejs16.x",
@@ -579,7 +585,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/PostHandler/GetPostsByTag.getPostsByTag",
               "Runtime": "nodejs16.x",
@@ -597,6 +603,31 @@
               "GetPostsByTagLogGroup"
             ]
           },
+          "GetPostByLocationOrSportLambdaFunction": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+              "Code": {
+                "S3Bucket": {
+                  "Ref": "ServerlessDeploymentBucket"
+                },
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
+              },
+              "Handler": "handlers/PostHandler/GetPostByLocationOrSport.getPostByLocationOrSport",
+              "Runtime": "nodejs16.x",
+              "FunctionName": "hobbies-app-ffe-dev-getPostByLocationOrSport",
+              "MemorySize": 128,
+              "Timeout": 6,
+              "Role": {
+                "Fn::GetAtt": [
+                  "IamRoleLambdaExecution",
+                  "Arn"
+                ]
+              }
+            },
+            "DependsOn": [
+              "GetPostByLocationOrSportLogGroup"
+            ]
+          },
           "UpdatePostLambdaFunction": {
             "Type": "AWS::Lambda::Function",
             "Properties": {
@@ -604,7 +635,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/PostHandler/UpdatePost.updatePost",
               "Runtime": "nodejs16.x",
@@ -629,7 +660,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/PostHandler/DeletePost.deletePost",
               "Runtime": "nodejs16.x",
@@ -654,7 +685,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/CommentsHandler/PostCommentAtPost.postCommentAtPost",
               "Runtime": "nodejs16.x",
@@ -679,7 +710,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/CommentsHandler/GetCommentsAtPost.getCommentsAtPost",
               "Runtime": "nodejs16.x",
@@ -704,7 +735,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/CommentsHandler/GetOneComment.getOneComment",
               "Runtime": "nodejs16.x",
@@ -729,7 +760,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/CommentsHandler/UpdateComment.updateComment",
               "Runtime": "nodejs16.x",
@@ -754,7 +785,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/CommentsHandler/DeleteComment.deleteComment",
               "Runtime": "nodejs16.x",
@@ -779,7 +810,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/CommentsHandler/GetCommentsByUserId.getCommentsByUserId",
               "Runtime": "nodejs16.x",
@@ -804,7 +835,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/handlerTest.postLikeAtPost",
               "Runtime": "nodejs16.x",
@@ -829,7 +860,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/handlerTest.postLikeAtComment",
               "Runtime": "nodejs16.x",
@@ -854,7 +885,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/FollowHandler/GetAllUserFollowers.getAllUserFollowers",
               "Runtime": "nodejs16.x",
@@ -879,7 +910,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/FollowHandler/PostFollowerAtUser.postFollowerAtUser",
               "Runtime": "nodejs16.x",
@@ -904,7 +935,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/PaymentHandler/PremiumPlan.premiumPlan",
               "Runtime": "nodejs16.x",
@@ -929,7 +960,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/PredefinedHandler/AddLocations.addLocations",
               "Runtime": "nodejs16.x",
@@ -954,7 +985,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/PredefinedHandler/AddSports.addSports",
               "Runtime": "nodejs16.x",
@@ -979,7 +1010,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/LocationHandler/GetLocations.getLocations",
               "Runtime": "nodejs16.x",
@@ -1004,7 +1035,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/LocationHandler/GetOneLocation.getOneLocation",
               "Runtime": "nodejs16.x",
@@ -1029,7 +1060,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/LocationHandler/DeleteLocation.deleteLocation",
               "Runtime": "nodejs16.x",
@@ -1054,7 +1085,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/SportsHandler/GetSports.getSports",
               "Runtime": "nodejs16.x",
@@ -1079,7 +1110,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/SportsHandler/GetOneSport.getOneSport",
               "Runtime": "nodejs16.x",
@@ -1104,7 +1135,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/SportsHandler/DeleteSport.deleteSport",
               "Runtime": "nodejs16.x",
@@ -1122,314 +1153,324 @@
               "DeleteSportLogGroup"
             ]
           },
-          "GetUsersLambdaVersionQF9hN3mfTZwUdhoBx2dcC56tj9P93G61Io0QXn7FLE": {
+          "GetUsersLambdaVersionf64lL29Vp0RQMrHP3WDW1bSftHWAnrqFtwXhNoRE": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetUsersLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "GetUserByIdLambdaVersioniXKHRqshCOzDoItEZ2SurKK724WFECNgoRL1QNEaG0": {
+          "GetUserByIdLambdaVersionmYrtAKh4LdVVau0QdcRU6sRXQzwcuCAugCMjIxu284o": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetUserByIdLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "PostUserLambdaVersionGzR9wq7Yy6E4XjbfqZ9pLh7gxIPBX4AQOLLslE": {
+          "PostUserLambdaVersionL86wuLAs9760kp2K9WyAA62tegVys97TudGfjavE3M": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "PostUserLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "UpdateUserLambdaVersionpyB56f1Ls40r6Iw4MQKS1dTHGYIui1kXRvDS2mkGTo": {
+          "UpdateUserLambdaVersionhUzMfJogPOo8dCMBxbacw6IXi3PuyTCQ7KlI1lQ": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "UpdateUserLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "DeleteUserLambdaVersionThwNVjCAetbpoMIHMfuhcDJA00IktCs9cgAZEYSs": {
+          "DeleteUserLambdaVersionCsjViY6UDz8K69PP9TqV4V9ocNOGvCpFlxZ2C0OaFm4": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "DeleteUserLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "PostPostAtUserLambdaVersion4PgWvZ4UPMvep8KzXx242ZUisdAcg5YpAbzblb9g": {
+          "PostPostAtUserLambdaVersionR4dMO6x0M2SPyNq2FwJX8t2R1S4qwnTvZMD8mVjrqI": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "PostPostAtUserLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "GetPostsByUserIdLambdaVersionQFyF77qn07D8GcsBsQwCLtcUjcivuiwtGxdpomPXq84": {
+          "GetPostsByUserIdLambdaVersiondOcs3oqfIj0xK9WTFbjZLocI1BnGKwv0ZXGxkKUcKM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetPostsByUserIdLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "GetOnePostLambdaVersion3Rcww73zJQBpSqXdeOWgAdyEb2U1phqf0w16N2iiU": {
+          "GetOnePostLambdaVersionuGUPJ94nI9hUF42qtGYjYXnZvTO8FZk96od8TqhZX8M": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetOnePostLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "GetAllPostsLambdaVersionHJvUFQZzmv4vRdyof9BFgDct3oIuFCHgtOr3pMuqG2c": {
+          "GetAllPostsLambdaVersionITgUcUnh7DuNXov75NQDXjCij99qQSNaT1WXbSdd8": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetAllPostsLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "GetPostsByTagLambdaVersionlAVSW3DnHFhiRGkyXjYoe2kwnjpz9kPLhRfg1CAq0": {
+          "GetPostsByTagLambdaVersionRvyAohavAZ2WZCVWzVCIBh7slQORenw2q94QK0hM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetPostsByTagLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "UpdatePostLambdaVersionva6rq2MTUKAyTazmwuUZU96soy53TcVCaPwMHM9kP4": {
+          "GetPostByLocationOrSportLambdaVersionx5NgIETMu9izvKntRUdUiYn3av2PLLbs0zbcmTyIsaY": {
+            "Type": "AWS::Lambda::Version",
+            "DeletionPolicy": "Retain",
+            "Properties": {
+              "FunctionName": {
+                "Ref": "GetPostByLocationOrSportLambdaFunction"
+              },
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
+            }
+          },
+          "UpdatePostLambdaVersionGgMVNv67msaioJbUGhFQbAROQYJwO0cGpKYfbonZLQ": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "UpdatePostLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "DeletePostLambdaVersionUuIVXFmmNOqObxmmEnkniyClgx4jsgHbXkeYXN1YlrU": {
+          "DeletePostLambdaVersion4fxZXUgsnRFOn818HzhedOuSAJBirK5xU16vnwtEBj8": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "DeletePostLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "PostCommentAtPostLambdaVersionSJp9OQSHbVOHDvaQaeRHVaocjhnfvtVOTQPn5W2Z4": {
+          "PostCommentAtPostLambdaVersionOvGh53mmuX8b5JqPRIhgoQoZVSwUgf54gCPyXcpFY": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "PostCommentAtPostLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "GetCommentsAtPostLambdaVersionXXSoNif1WMgskNNQF1BKjKjEHlC84Xx39mYx9TleWU": {
+          "GetCommentsAtPostLambdaVersionQsZyvLShSV90j61PvGyDMnARyWEyQq79sERho6VHoyc": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetCommentsAtPostLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "GetOneCommentLambdaVersionXXap6YhYOjRAdaCBzAUifKKs3x6BSGOg1pWvmsRMYA": {
+          "GetOneCommentLambdaVersionYeNCaUa2v4v0D6jPhvXPnf8NPNYjvDY4fZ2tAUh3sRI": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetOneCommentLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "UpdateCommentLambdaVersionDC3XlU50k3rJmshOofhAGVg8cabBD4YQQZh6OKNI": {
+          "UpdateCommentLambdaVersion1Rog8Dx0SJA27nmud0Jplek4Agly7uh8rfQcxsGODGo": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "UpdateCommentLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "DeleteCommentLambdaVersion0RrfBCNk4sTSf06LvYdo1Qi25uZ4XNBVMRD9hVf98": {
+          "DeleteCommentLambdaVersion5A6jbisx1plKf5GKvLhrWg3eSIg6wlXDQBRUInDcl8": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "DeleteCommentLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "GetCommentsByUserIdLambdaVersionOkudsCQHbMg6z5xnhFmzUGMZL8XetjDJPVrLXMgRw": {
+          "GetCommentsByUserIdLambdaVersion5su4wICP9tF5aJ8zF4hJPpIGxY9ZbUDeNNgzKxLDbw": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetCommentsByUserIdLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "PostLikeAtPostLambdaVersionRST5AW7QsQ0f9FZTY2rx38B9bTXFwCrOMqNrmBPe1c4": {
+          "PostLikeAtPostLambdaVersioneAzztKnkk2roal26rFqkF2oxRjUfQodLOPFdMR08": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "PostLikeAtPostLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "PostLikeAtCommentLambdaVersionQeeb06evnGgCuV0lg6N8QuXkvN3TOpwIvuRytkqbjzw": {
+          "PostLikeAtCommentLambdaVersion7gJMmuxKJW3ybB8dn0LPTxcH4HHWUwgG0D1yCxxZEGg": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "PostLikeAtCommentLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "GetAllUserFollowersLambdaVersionJSyxLRjAwHPedrR3KYMpzmop7usjP3B6xVvxEbpiLw": {
+          "GetAllUserFollowersLambdaVersionbh0xjQEV34JqjsNjAbKQhlBLJUnBk4XkSppTkYi82rM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetAllUserFollowersLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "PostFollowerAtUserLambdaVersionVZ5iDqKNYoc8EFkYbKlNBATc00GvM9ebcUs71bNsQ3s": {
+          "PostFollowerAtUserLambdaVersionedlgHj297l5NkeYeRRrL7GhJGMXfWSM8WANdEatOA": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "PostFollowerAtUserLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "PremiumPlanLambdaVersionrHUInEbf7MX3GQ6aTHDtMxIe73HwMMB1OGoQ6i8AQ": {
+          "PremiumPlanLambdaVersiontO7IdNceBAzzuSmPXZCyvZlaXtU3CMxverVmUSVBro": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "PremiumPlanLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "AddLocationsLambdaVersionRn2GQdJQ93r0DXbCsTyJMs1wPQ0BeYBVxOIV0wRPnXQ": {
+          "AddLocationsLambdaVersionhdDKIYfDsA0SdaFf90MUkNwUMEerPlPfwRRgYPnbHJ0": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AddLocationsLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "AddSportsLambdaVersionYO43qBFktsadxVVKfu9izblTa7DTK5t06MTkBDX7pI": {
+          "AddSportsLambdaVersionelSsbThe3HZQGCM6SkdAf1R5Lc8FqaIhDx9hinQ26s": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AddSportsLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "GetLocationsLambdaVersionYFwDvzEWbZDQd7nUGEmnlm9yaCYdHqmAci4BhEhZTg": {
+          "GetLocationsLambdaVersionylJ7oAuZyhamuhyTWB2ULy28EXWOUvZgGWKHyAu7bo": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetLocationsLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "GetOneLocationLambdaVersionXnAXPRRPfiU7uy2UWUB6A4kNUAMNpDpC0sWipjAs0Q": {
+          "GetOneLocationLambdaVersionKH9FmowpEHiFP1oXP94LzX3LqJjb9C7gPvzSoFG6LM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetOneLocationLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "DeleteLocationLambdaVersion6XMti7S75MIGyqTIbR5jF6izml9zRpyJL1r7Dk": {
+          "DeleteLocationLambdaVersionglBeFFWsp79w0N3aVZVkWl6QVlca43kwJTD9N7KweA": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "DeleteLocationLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "GetSportsLambdaVersionYoKCTI3I2UHD9BIuypXOznBpibzpRqGEjSGNbrlg9y4": {
+          "GetSportsLambdaVersionBWgtGJu348WmNisscbrQhNRijfRfBBZX4xupfg1g": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetSportsLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "GetOneSportLambdaVersionLNVAqJnWYoomxu8ohM4BfazUJcU80rOhTPJpoD4ydk": {
+          "GetOneSportLambdaVersion0YaEQjU8uqwbAZHVWST6G0vfRVRScDgbzNGiKnuABjM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetOneSportLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
-          "DeleteSportLambdaVersionALEIC1ctIdNPEctnfcvLcSnLZ11yZfMSiWA9dEOM": {
+          "DeleteSportLambdaVersionWvc0U1nRdB4pEC1CQ3iu7MlqLgN1iNHrTjYo1SI8VCQ": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "DeleteSportLambdaFunction"
               },
-              "CodeSha256": "ylQubBsGC1Ug6Y2u9o3qcxtTWk1u4ElGONqAVGLjPUU="
+              "CodeSha256": "v6MOMXXNNYKZAas/ezmD7agjSK0cjT2qJgPXnXT+krg="
             }
           },
           "ApiGatewayRestApi": {
@@ -1682,6 +1723,21 @@
                 ]
               },
               "PathPart": "bytag",
+              "RestApiId": {
+                "Ref": "ApiGatewayRestApi"
+              }
+            }
+          },
+          "ApiGatewayResourceBylocationsport": {
+            "Type": "AWS::ApiGateway::Resource",
+            "Properties": {
+              "ParentId": {
+                "Fn::GetAtt": [
+                  "ApiGatewayRestApi",
+                  "RootResourceId"
+                ]
+              },
+              "PathPart": "bylocationsport",
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               }
@@ -2506,6 +2562,51 @@
               },
               "ResourceId": {
                 "Ref": "ApiGatewayResourceBytag"
+              },
+              "RestApiId": {
+                "Ref": "ApiGatewayRestApi"
+              }
+            }
+          },
+          "ApiGatewayMethodBylocationsportOptions": {
+            "Type": "AWS::ApiGateway::Method",
+            "Properties": {
+              "AuthorizationType": "NONE",
+              "HttpMethod": "OPTIONS",
+              "MethodResponses": [
+                {
+                  "StatusCode": "200",
+                  "ResponseParameters": {
+                    "method.response.header.Access-Control-Allow-Origin": true,
+                    "method.response.header.Access-Control-Allow-Headers": true,
+                    "method.response.header.Access-Control-Allow-Methods": true
+                  },
+                  "ResponseModels": {}
+                }
+              ],
+              "RequestParameters": {},
+              "Integration": {
+                "Type": "MOCK",
+                "RequestTemplates": {
+                  "application/json": "{statusCode:200}"
+                },
+                "ContentHandling": "CONVERT_TO_TEXT",
+                "IntegrationResponses": [
+                  {
+                    "StatusCode": "200",
+                    "ResponseParameters": {
+                      "method.response.header.Access-Control-Allow-Origin": "'*'",
+                      "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                      "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
+                    },
+                    "ResponseTemplates": {
+                      "application/json": ""
+                    }
+                  }
+                ]
+              },
+              "ResourceId": {
+                "Ref": "ApiGatewayResourceBylocationsport"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
@@ -3782,6 +3883,52 @@
               "GetPostsByTagLambdaPermissionApiGateway"
             ]
           },
+          "ApiGatewayMethodBylocationsportGet": {
+            "Type": "AWS::ApiGateway::Method",
+            "Properties": {
+              "HttpMethod": "GET",
+              "RequestParameters": {},
+              "ResourceId": {
+                "Ref": "ApiGatewayResourceBylocationsport"
+              },
+              "RestApiId": {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "ApiKeyRequired": false,
+              "AuthorizationType": "NONE",
+              "Integration": {
+                "IntegrationHttpMethod": "POST",
+                "Type": "AWS_PROXY",
+                "Uri": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":apigateway:",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      ":lambda:path/2015-03-31/functions/",
+                      {
+                        "Fn::GetAtt": [
+                          "GetPostByLocationOrSportLambdaFunction",
+                          "Arn"
+                        ]
+                      },
+                      "/invocations"
+                    ]
+                  ]
+                }
+              },
+              "MethodResponses": []
+            },
+            "DependsOn": [
+              "GetPostByLocationOrSportLambdaPermissionApiGateway"
+            ]
+          },
           "ApiGatewayMethodPostPutIdVarPatch": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
@@ -4748,7 +4895,7 @@
               "DeleteSportLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1662992683142": {
+          "ApiGatewayDeployment1663058199586": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -4767,6 +4914,7 @@
               "ApiGatewayMethodPostIdVarOptions",
               "ApiGatewayMethodAllpostsOptions",
               "ApiGatewayMethodBytagOptions",
+              "ApiGatewayMethodBylocationsportOptions",
               "ApiGatewayMethodPostPutIdVarOptions",
               "ApiGatewayMethodPostDeleteIdVarOptions",
               "ApiGatewayMethodCommentPostIdVarOptions",
@@ -4795,6 +4943,7 @@
               "ApiGatewayMethodPostIdVarGet",
               "ApiGatewayMethodAllpostsGet",
               "ApiGatewayMethodBytagGet",
+              "ApiGatewayMethodBylocationsportGet",
               "ApiGatewayMethodPostPutIdVarPatch",
               "ApiGatewayMethodPostDeleteIdVarDelete",
               "ApiGatewayMethodCommentPostIdVarPost",
@@ -5157,6 +5306,43 @@
               "FunctionName": {
                 "Fn::GetAtt": [
                   "GetPostsByTagLambdaFunction",
+                  "Arn"
+                ]
+              },
+              "Action": "lambda:InvokeFunction",
+              "Principal": "apigateway.amazonaws.com",
+              "SourceArn": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":execute-api:",
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    ":",
+                    {
+                      "Ref": "AWS::AccountId"
+                    },
+                    ":",
+                    {
+                      "Ref": "ApiGatewayRestApi"
+                    },
+                    "/*/*"
+                  ]
+                ]
+              }
+            }
+          },
+          "GetPostByLocationOrSportLambdaPermissionApiGateway": {
+            "Type": "AWS::Lambda::Permission",
+            "Properties": {
+              "FunctionName": {
+                "Fn::GetAtt": [
+                  "GetPostByLocationOrSportLambdaFunction",
                   "Arn"
                 ]
               },
@@ -5978,7 +6164,7 @@
           "GetUsersLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetUsersLambdaVersionQF9hN3mfTZwUdhoBx2dcC56tj9P93G61Io0QXn7FLE"
+              "Ref": "GetUsersLambdaVersionf64lL29Vp0RQMrHP3WDW1bSftHWAnrqFtwXhNoRE"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-GetUsersLambdaFunctionQualifiedArn"
@@ -5987,7 +6173,7 @@
           "GetUserByIdLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetUserByIdLambdaVersioniXKHRqshCOzDoItEZ2SurKK724WFECNgoRL1QNEaG0"
+              "Ref": "GetUserByIdLambdaVersionmYrtAKh4LdVVau0QdcRU6sRXQzwcuCAugCMjIxu284o"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-GetUserByIdLambdaFunctionQualifiedArn"
@@ -5996,7 +6182,7 @@
           "PostUserLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "PostUserLambdaVersionGzR9wq7Yy6E4XjbfqZ9pLh7gxIPBX4AQOLLslE"
+              "Ref": "PostUserLambdaVersionL86wuLAs9760kp2K9WyAA62tegVys97TudGfjavE3M"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-PostUserLambdaFunctionQualifiedArn"
@@ -6005,7 +6191,7 @@
           "UpdateUserLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "UpdateUserLambdaVersionpyB56f1Ls40r6Iw4MQKS1dTHGYIui1kXRvDS2mkGTo"
+              "Ref": "UpdateUserLambdaVersionhUzMfJogPOo8dCMBxbacw6IXi3PuyTCQ7KlI1lQ"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-UpdateUserLambdaFunctionQualifiedArn"
@@ -6014,7 +6200,7 @@
           "DeleteUserLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "DeleteUserLambdaVersionThwNVjCAetbpoMIHMfuhcDJA00IktCs9cgAZEYSs"
+              "Ref": "DeleteUserLambdaVersionCsjViY6UDz8K69PP9TqV4V9ocNOGvCpFlxZ2C0OaFm4"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-DeleteUserLambdaFunctionQualifiedArn"
@@ -6023,7 +6209,7 @@
           "PostPostAtUserLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "PostPostAtUserLambdaVersion4PgWvZ4UPMvep8KzXx242ZUisdAcg5YpAbzblb9g"
+              "Ref": "PostPostAtUserLambdaVersionR4dMO6x0M2SPyNq2FwJX8t2R1S4qwnTvZMD8mVjrqI"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-PostPostAtUserLambdaFunctionQualifiedArn"
@@ -6032,7 +6218,7 @@
           "GetPostsByUserIdLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetPostsByUserIdLambdaVersionQFyF77qn07D8GcsBsQwCLtcUjcivuiwtGxdpomPXq84"
+              "Ref": "GetPostsByUserIdLambdaVersiondOcs3oqfIj0xK9WTFbjZLocI1BnGKwv0ZXGxkKUcKM"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-GetPostsByUserIdLambdaFunctionQualifiedArn"
@@ -6041,7 +6227,7 @@
           "GetOnePostLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetOnePostLambdaVersion3Rcww73zJQBpSqXdeOWgAdyEb2U1phqf0w16N2iiU"
+              "Ref": "GetOnePostLambdaVersionuGUPJ94nI9hUF42qtGYjYXnZvTO8FZk96od8TqhZX8M"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-GetOnePostLambdaFunctionQualifiedArn"
@@ -6050,7 +6236,7 @@
           "GetAllPostsLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetAllPostsLambdaVersionHJvUFQZzmv4vRdyof9BFgDct3oIuFCHgtOr3pMuqG2c"
+              "Ref": "GetAllPostsLambdaVersionITgUcUnh7DuNXov75NQDXjCij99qQSNaT1WXbSdd8"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-GetAllPostsLambdaFunctionQualifiedArn"
@@ -6059,16 +6245,25 @@
           "GetPostsByTagLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetPostsByTagLambdaVersionlAVSW3DnHFhiRGkyXjYoe2kwnjpz9kPLhRfg1CAq0"
+              "Ref": "GetPostsByTagLambdaVersionRvyAohavAZ2WZCVWzVCIBh7slQORenw2q94QK0hM"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-GetPostsByTagLambdaFunctionQualifiedArn"
             }
           },
+          "GetPostByLocationOrSportLambdaFunctionQualifiedArn": {
+            "Description": "Current Lambda function version",
+            "Value": {
+              "Ref": "GetPostByLocationOrSportLambdaVersionx5NgIETMu9izvKntRUdUiYn3av2PLLbs0zbcmTyIsaY"
+            },
+            "Export": {
+              "Name": "sls-hobbies-app-ffe-dev-GetPostByLocationOrSportLambdaFunctionQualifiedArn"
+            }
+          },
           "UpdatePostLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "UpdatePostLambdaVersionva6rq2MTUKAyTazmwuUZU96soy53TcVCaPwMHM9kP4"
+              "Ref": "UpdatePostLambdaVersionGgMVNv67msaioJbUGhFQbAROQYJwO0cGpKYfbonZLQ"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-UpdatePostLambdaFunctionQualifiedArn"
@@ -6077,7 +6272,7 @@
           "DeletePostLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "DeletePostLambdaVersionUuIVXFmmNOqObxmmEnkniyClgx4jsgHbXkeYXN1YlrU"
+              "Ref": "DeletePostLambdaVersion4fxZXUgsnRFOn818HzhedOuSAJBirK5xU16vnwtEBj8"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-DeletePostLambdaFunctionQualifiedArn"
@@ -6086,7 +6281,7 @@
           "PostCommentAtPostLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "PostCommentAtPostLambdaVersionSJp9OQSHbVOHDvaQaeRHVaocjhnfvtVOTQPn5W2Z4"
+              "Ref": "PostCommentAtPostLambdaVersionOvGh53mmuX8b5JqPRIhgoQoZVSwUgf54gCPyXcpFY"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-PostCommentAtPostLambdaFunctionQualifiedArn"
@@ -6095,7 +6290,7 @@
           "GetCommentsAtPostLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetCommentsAtPostLambdaVersionXXSoNif1WMgskNNQF1BKjKjEHlC84Xx39mYx9TleWU"
+              "Ref": "GetCommentsAtPostLambdaVersionQsZyvLShSV90j61PvGyDMnARyWEyQq79sERho6VHoyc"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-GetCommentsAtPostLambdaFunctionQualifiedArn"
@@ -6104,7 +6299,7 @@
           "GetOneCommentLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetOneCommentLambdaVersionXXap6YhYOjRAdaCBzAUifKKs3x6BSGOg1pWvmsRMYA"
+              "Ref": "GetOneCommentLambdaVersionYeNCaUa2v4v0D6jPhvXPnf8NPNYjvDY4fZ2tAUh3sRI"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-GetOneCommentLambdaFunctionQualifiedArn"
@@ -6113,7 +6308,7 @@
           "UpdateCommentLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "UpdateCommentLambdaVersionDC3XlU50k3rJmshOofhAGVg8cabBD4YQQZh6OKNI"
+              "Ref": "UpdateCommentLambdaVersion1Rog8Dx0SJA27nmud0Jplek4Agly7uh8rfQcxsGODGo"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-UpdateCommentLambdaFunctionQualifiedArn"
@@ -6122,7 +6317,7 @@
           "DeleteCommentLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "DeleteCommentLambdaVersion0RrfBCNk4sTSf06LvYdo1Qi25uZ4XNBVMRD9hVf98"
+              "Ref": "DeleteCommentLambdaVersion5A6jbisx1plKf5GKvLhrWg3eSIg6wlXDQBRUInDcl8"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-DeleteCommentLambdaFunctionQualifiedArn"
@@ -6131,7 +6326,7 @@
           "GetCommentsByUserIdLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetCommentsByUserIdLambdaVersionOkudsCQHbMg6z5xnhFmzUGMZL8XetjDJPVrLXMgRw"
+              "Ref": "GetCommentsByUserIdLambdaVersion5su4wICP9tF5aJ8zF4hJPpIGxY9ZbUDeNNgzKxLDbw"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-GetCommentsByUserIdLambdaFunctionQualifiedArn"
@@ -6140,7 +6335,7 @@
           "PostLikeAtPostLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "PostLikeAtPostLambdaVersionRST5AW7QsQ0f9FZTY2rx38B9bTXFwCrOMqNrmBPe1c4"
+              "Ref": "PostLikeAtPostLambdaVersioneAzztKnkk2roal26rFqkF2oxRjUfQodLOPFdMR08"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-PostLikeAtPostLambdaFunctionQualifiedArn"
@@ -6149,7 +6344,7 @@
           "PostLikeAtCommentLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "PostLikeAtCommentLambdaVersionQeeb06evnGgCuV0lg6N8QuXkvN3TOpwIvuRytkqbjzw"
+              "Ref": "PostLikeAtCommentLambdaVersion7gJMmuxKJW3ybB8dn0LPTxcH4HHWUwgG0D1yCxxZEGg"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-PostLikeAtCommentLambdaFunctionQualifiedArn"
@@ -6158,7 +6353,7 @@
           "GetAllUserFollowersLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetAllUserFollowersLambdaVersionJSyxLRjAwHPedrR3KYMpzmop7usjP3B6xVvxEbpiLw"
+              "Ref": "GetAllUserFollowersLambdaVersionbh0xjQEV34JqjsNjAbKQhlBLJUnBk4XkSppTkYi82rM"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-GetAllUserFollowersLambdaFunctionQualifiedArn"
@@ -6167,7 +6362,7 @@
           "PostFollowerAtUserLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "PostFollowerAtUserLambdaVersionVZ5iDqKNYoc8EFkYbKlNBATc00GvM9ebcUs71bNsQ3s"
+              "Ref": "PostFollowerAtUserLambdaVersionedlgHj297l5NkeYeRRrL7GhJGMXfWSM8WANdEatOA"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-PostFollowerAtUserLambdaFunctionQualifiedArn"
@@ -6176,7 +6371,7 @@
           "PremiumPlanLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "PremiumPlanLambdaVersionrHUInEbf7MX3GQ6aTHDtMxIe73HwMMB1OGoQ6i8AQ"
+              "Ref": "PremiumPlanLambdaVersiontO7IdNceBAzzuSmPXZCyvZlaXtU3CMxverVmUSVBro"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-PremiumPlanLambdaFunctionQualifiedArn"
@@ -6185,7 +6380,7 @@
           "AddLocationsLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AddLocationsLambdaVersionRn2GQdJQ93r0DXbCsTyJMs1wPQ0BeYBVxOIV0wRPnXQ"
+              "Ref": "AddLocationsLambdaVersionhdDKIYfDsA0SdaFf90MUkNwUMEerPlPfwRRgYPnbHJ0"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-AddLocationsLambdaFunctionQualifiedArn"
@@ -6194,7 +6389,7 @@
           "AddSportsLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AddSportsLambdaVersionYO43qBFktsadxVVKfu9izblTa7DTK5t06MTkBDX7pI"
+              "Ref": "AddSportsLambdaVersionelSsbThe3HZQGCM6SkdAf1R5Lc8FqaIhDx9hinQ26s"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-AddSportsLambdaFunctionQualifiedArn"
@@ -6203,7 +6398,7 @@
           "GetLocationsLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetLocationsLambdaVersionYFwDvzEWbZDQd7nUGEmnlm9yaCYdHqmAci4BhEhZTg"
+              "Ref": "GetLocationsLambdaVersionylJ7oAuZyhamuhyTWB2ULy28EXWOUvZgGWKHyAu7bo"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-GetLocationsLambdaFunctionQualifiedArn"
@@ -6212,7 +6407,7 @@
           "GetOneLocationLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetOneLocationLambdaVersionXnAXPRRPfiU7uy2UWUB6A4kNUAMNpDpC0sWipjAs0Q"
+              "Ref": "GetOneLocationLambdaVersionKH9FmowpEHiFP1oXP94LzX3LqJjb9C7gPvzSoFG6LM"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-GetOneLocationLambdaFunctionQualifiedArn"
@@ -6221,7 +6416,7 @@
           "DeleteLocationLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "DeleteLocationLambdaVersion6XMti7S75MIGyqTIbR5jF6izml9zRpyJL1r7Dk"
+              "Ref": "DeleteLocationLambdaVersionglBeFFWsp79w0N3aVZVkWl6QVlca43kwJTD9N7KweA"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-DeleteLocationLambdaFunctionQualifiedArn"
@@ -6230,7 +6425,7 @@
           "GetSportsLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetSportsLambdaVersionYoKCTI3I2UHD9BIuypXOznBpibzpRqGEjSGNbrlg9y4"
+              "Ref": "GetSportsLambdaVersionBWgtGJu348WmNisscbrQhNRijfRfBBZX4xupfg1g"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-GetSportsLambdaFunctionQualifiedArn"
@@ -6239,7 +6434,7 @@
           "GetOneSportLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetOneSportLambdaVersionLNVAqJnWYoomxu8ohM4BfazUJcU80rOhTPJpoD4ydk"
+              "Ref": "GetOneSportLambdaVersion0YaEQjU8uqwbAZHVWST6G0vfRVRScDgbzNGiKnuABjM"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-GetOneSportLambdaFunctionQualifiedArn"
@@ -6248,7 +6443,7 @@
           "DeleteSportLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "DeleteSportLambdaVersionALEIC1ctIdNPEctnfcvLcSnLZ11yZfMSiWA9dEOM"
+              "Ref": "DeleteSportLambdaVersionWvc0U1nRdB4pEC1CQ3iu7MlqLgN1iNHrTjYo1SI8VCQ"
             },
             "Export": {
               "Name": "sls-hobbies-app-ffe-dev-DeleteSportLambdaFunctionQualifiedArn"
@@ -6405,7 +6600,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "GetUsersLambdaVersionQF9hN3mfTZwUdhoBx2dcC56tj9P93G61Io0QXn7FLE"
+        "versionLogicalId": "GetUsersLambdaVersionf64lL29Vp0RQMrHP3WDW1bSftHWAnrqFtwXhNoRE"
       },
       "getUserById": {
         "handler": "handlers/UserHandler/GetOneUser.getUserById",
@@ -6441,7 +6636,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "GetUserByIdLambdaVersioniXKHRqshCOzDoItEZ2SurKK724WFECNgoRL1QNEaG0"
+        "versionLogicalId": "GetUserByIdLambdaVersionmYrtAKh4LdVVau0QdcRU6sRXQzwcuCAugCMjIxu284o"
       },
       "postUser": {
         "handler": "handlers/handlerTest.postUser",
@@ -6477,7 +6672,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "PostUserLambdaVersionGzR9wq7Yy6E4XjbfqZ9pLh7gxIPBX4AQOLLslE"
+        "versionLogicalId": "PostUserLambdaVersionL86wuLAs9760kp2K9WyAA62tegVys97TudGfjavE3M"
       },
       "updateUser": {
         "handler": "handlers/UserHandler/UpdateUser.updateUser",
@@ -6513,7 +6708,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "UpdateUserLambdaVersionpyB56f1Ls40r6Iw4MQKS1dTHGYIui1kXRvDS2mkGTo"
+        "versionLogicalId": "UpdateUserLambdaVersionhUzMfJogPOo8dCMBxbacw6IXi3PuyTCQ7KlI1lQ"
       },
       "deleteUser": {
         "handler": "handlers/UserHandler/DeleteUser.deleteUser",
@@ -6549,7 +6744,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "DeleteUserLambdaVersionThwNVjCAetbpoMIHMfuhcDJA00IktCs9cgAZEYSs"
+        "versionLogicalId": "DeleteUserLambdaVersionCsjViY6UDz8K69PP9TqV4V9ocNOGvCpFlxZ2C0OaFm4"
       },
       "postPostAtUser": {
         "handler": "handlers/PostHandler/CreatePostAtUser.postPostAtUser",
@@ -6585,7 +6780,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "PostPostAtUserLambdaVersion4PgWvZ4UPMvep8KzXx242ZUisdAcg5YpAbzblb9g"
+        "versionLogicalId": "PostPostAtUserLambdaVersionR4dMO6x0M2SPyNq2FwJX8t2R1S4qwnTvZMD8mVjrqI"
       },
       "getPostsByUserId": {
         "handler": "handlers/PostHandler/GetPostByUserId.getPostsByUserId",
@@ -6621,7 +6816,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "GetPostsByUserIdLambdaVersionQFyF77qn07D8GcsBsQwCLtcUjcivuiwtGxdpomPXq84"
+        "versionLogicalId": "GetPostsByUserIdLambdaVersiondOcs3oqfIj0xK9WTFbjZLocI1BnGKwv0ZXGxkKUcKM"
       },
       "getOnePost": {
         "handler": "handlers/PostHandler/GetOnePost.getOnePost",
@@ -6657,7 +6852,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "GetOnePostLambdaVersion3Rcww73zJQBpSqXdeOWgAdyEb2U1phqf0w16N2iiU"
+        "versionLogicalId": "GetOnePostLambdaVersionuGUPJ94nI9hUF42qtGYjYXnZvTO8FZk96od8TqhZX8M"
       },
       "getAllPosts": {
         "handler": "handlers/PostHandler/GetAllPosts.getAllPosts",
@@ -6693,7 +6888,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "GetAllPostsLambdaVersionHJvUFQZzmv4vRdyof9BFgDct3oIuFCHgtOr3pMuqG2c"
+        "versionLogicalId": "GetAllPostsLambdaVersionITgUcUnh7DuNXov75NQDXjCij99qQSNaT1WXbSdd8"
       },
       "getPostsByTag": {
         "handler": "handlers/PostHandler/GetPostsByTag.getPostsByTag",
@@ -6729,7 +6924,43 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "GetPostsByTagLambdaVersionlAVSW3DnHFhiRGkyXjYoe2kwnjpz9kPLhRfg1CAq0"
+        "versionLogicalId": "GetPostsByTagLambdaVersionRvyAohavAZ2WZCVWzVCIBh7slQORenw2q94QK0hM"
+      },
+      "getPostByLocationOrSport": {
+        "handler": "handlers/PostHandler/GetPostByLocationOrSport.getPostByLocationOrSport",
+        "events": [
+          {
+            "http": {
+              "path": "bylocationsport",
+              "method": "get",
+              "cors": {
+                "origin": "*",
+                "methods": [
+                  "OPTIONS",
+                  "GET"
+                ],
+                "headers": [
+                  "Content-Type",
+                  "X-Amz-Date",
+                  "Authorization",
+                  "X-Api-Key",
+                  "X-Amz-Security-Token",
+                  "X-Amz-User-Agent",
+                  "X-Amzn-Trace-Id"
+                ],
+                "allowCredentials": false
+              },
+              "integration": "AWS_PROXY"
+            }
+          }
+        ],
+        "name": "hobbies-app-ffe-dev-getPostByLocationOrSport",
+        "package": {},
+        "memory": 128,
+        "timeout": 6,
+        "runtime": "nodejs16.x",
+        "vpc": {},
+        "versionLogicalId": "GetPostByLocationOrSportLambdaVersionx5NgIETMu9izvKntRUdUiYn3av2PLLbs0zbcmTyIsaY"
       },
       "updatePost": {
         "handler": "handlers/PostHandler/UpdatePost.updatePost",
@@ -6765,7 +6996,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "UpdatePostLambdaVersionva6rq2MTUKAyTazmwuUZU96soy53TcVCaPwMHM9kP4"
+        "versionLogicalId": "UpdatePostLambdaVersionGgMVNv67msaioJbUGhFQbAROQYJwO0cGpKYfbonZLQ"
       },
       "deletePost": {
         "handler": "handlers/PostHandler/DeletePost.deletePost",
@@ -6801,7 +7032,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "DeletePostLambdaVersionUuIVXFmmNOqObxmmEnkniyClgx4jsgHbXkeYXN1YlrU"
+        "versionLogicalId": "DeletePostLambdaVersion4fxZXUgsnRFOn818HzhedOuSAJBirK5xU16vnwtEBj8"
       },
       "postCommentAtPost": {
         "handler": "handlers/CommentsHandler/PostCommentAtPost.postCommentAtPost",
@@ -6837,7 +7068,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "PostCommentAtPostLambdaVersionSJp9OQSHbVOHDvaQaeRHVaocjhnfvtVOTQPn5W2Z4"
+        "versionLogicalId": "PostCommentAtPostLambdaVersionOvGh53mmuX8b5JqPRIhgoQoZVSwUgf54gCPyXcpFY"
       },
       "getCommentsAtPost": {
         "handler": "handlers/CommentsHandler/GetCommentsAtPost.getCommentsAtPost",
@@ -6873,7 +7104,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "GetCommentsAtPostLambdaVersionXXSoNif1WMgskNNQF1BKjKjEHlC84Xx39mYx9TleWU"
+        "versionLogicalId": "GetCommentsAtPostLambdaVersionQsZyvLShSV90j61PvGyDMnARyWEyQq79sERho6VHoyc"
       },
       "getOneComment": {
         "handler": "handlers/CommentsHandler/GetOneComment.getOneComment",
@@ -6909,7 +7140,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "GetOneCommentLambdaVersionXXap6YhYOjRAdaCBzAUifKKs3x6BSGOg1pWvmsRMYA"
+        "versionLogicalId": "GetOneCommentLambdaVersionYeNCaUa2v4v0D6jPhvXPnf8NPNYjvDY4fZ2tAUh3sRI"
       },
       "updateComment": {
         "handler": "handlers/CommentsHandler/UpdateComment.updateComment",
@@ -6945,7 +7176,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "UpdateCommentLambdaVersionDC3XlU50k3rJmshOofhAGVg8cabBD4YQQZh6OKNI"
+        "versionLogicalId": "UpdateCommentLambdaVersion1Rog8Dx0SJA27nmud0Jplek4Agly7uh8rfQcxsGODGo"
       },
       "deleteComment": {
         "handler": "handlers/CommentsHandler/DeleteComment.deleteComment",
@@ -6981,7 +7212,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "DeleteCommentLambdaVersion0RrfBCNk4sTSf06LvYdo1Qi25uZ4XNBVMRD9hVf98"
+        "versionLogicalId": "DeleteCommentLambdaVersion5A6jbisx1plKf5GKvLhrWg3eSIg6wlXDQBRUInDcl8"
       },
       "getCommentsByUserId": {
         "handler": "handlers/CommentsHandler/GetCommentsByUserId.getCommentsByUserId",
@@ -7017,7 +7248,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "GetCommentsByUserIdLambdaVersionOkudsCQHbMg6z5xnhFmzUGMZL8XetjDJPVrLXMgRw"
+        "versionLogicalId": "GetCommentsByUserIdLambdaVersion5su4wICP9tF5aJ8zF4hJPpIGxY9ZbUDeNNgzKxLDbw"
       },
       "postLikeAtPost": {
         "handler": "handlers/handlerTest.postLikeAtPost",
@@ -7053,7 +7284,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "PostLikeAtPostLambdaVersionRST5AW7QsQ0f9FZTY2rx38B9bTXFwCrOMqNrmBPe1c4"
+        "versionLogicalId": "PostLikeAtPostLambdaVersioneAzztKnkk2roal26rFqkF2oxRjUfQodLOPFdMR08"
       },
       "postLikeAtComment": {
         "handler": "handlers/handlerTest.postLikeAtComment",
@@ -7089,7 +7320,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "PostLikeAtCommentLambdaVersionQeeb06evnGgCuV0lg6N8QuXkvN3TOpwIvuRytkqbjzw"
+        "versionLogicalId": "PostLikeAtCommentLambdaVersion7gJMmuxKJW3ybB8dn0LPTxcH4HHWUwgG0D1yCxxZEGg"
       },
       "getAllUserFollowers": {
         "handler": "handlers/FollowHandler/GetAllUserFollowers.getAllUserFollowers",
@@ -7125,7 +7356,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "GetAllUserFollowersLambdaVersionJSyxLRjAwHPedrR3KYMpzmop7usjP3B6xVvxEbpiLw"
+        "versionLogicalId": "GetAllUserFollowersLambdaVersionbh0xjQEV34JqjsNjAbKQhlBLJUnBk4XkSppTkYi82rM"
       },
       "postFollowerAtUser": {
         "handler": "handlers/FollowHandler/PostFollowerAtUser.postFollowerAtUser",
@@ -7161,7 +7392,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "PostFollowerAtUserLambdaVersionVZ5iDqKNYoc8EFkYbKlNBATc00GvM9ebcUs71bNsQ3s"
+        "versionLogicalId": "PostFollowerAtUserLambdaVersionedlgHj297l5NkeYeRRrL7GhJGMXfWSM8WANdEatOA"
       },
       "premiumPlan": {
         "handler": "handlers/PaymentHandler/PremiumPlan.premiumPlan",
@@ -7197,7 +7428,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "PremiumPlanLambdaVersionrHUInEbf7MX3GQ6aTHDtMxIe73HwMMB1OGoQ6i8AQ"
+        "versionLogicalId": "PremiumPlanLambdaVersiontO7IdNceBAzzuSmPXZCyvZlaXtU3CMxverVmUSVBro"
       },
       "addLocations": {
         "handler": "handlers/PredefinedHandler/AddLocations.addLocations",
@@ -7233,7 +7464,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "AddLocationsLambdaVersionRn2GQdJQ93r0DXbCsTyJMs1wPQ0BeYBVxOIV0wRPnXQ"
+        "versionLogicalId": "AddLocationsLambdaVersionhdDKIYfDsA0SdaFf90MUkNwUMEerPlPfwRRgYPnbHJ0"
       },
       "addSports": {
         "handler": "handlers/PredefinedHandler/AddSports.addSports",
@@ -7269,7 +7500,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "AddSportsLambdaVersionYO43qBFktsadxVVKfu9izblTa7DTK5t06MTkBDX7pI"
+        "versionLogicalId": "AddSportsLambdaVersionelSsbThe3HZQGCM6SkdAf1R5Lc8FqaIhDx9hinQ26s"
       },
       "getLocations": {
         "handler": "handlers/LocationHandler/GetLocations.getLocations",
@@ -7305,7 +7536,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "GetLocationsLambdaVersionYFwDvzEWbZDQd7nUGEmnlm9yaCYdHqmAci4BhEhZTg"
+        "versionLogicalId": "GetLocationsLambdaVersionylJ7oAuZyhamuhyTWB2ULy28EXWOUvZgGWKHyAu7bo"
       },
       "getOneLocation": {
         "handler": "handlers/LocationHandler/GetOneLocation.getOneLocation",
@@ -7341,7 +7572,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "GetOneLocationLambdaVersionXnAXPRRPfiU7uy2UWUB6A4kNUAMNpDpC0sWipjAs0Q"
+        "versionLogicalId": "GetOneLocationLambdaVersionKH9FmowpEHiFP1oXP94LzX3LqJjb9C7gPvzSoFG6LM"
       },
       "deleteLocation": {
         "handler": "handlers/LocationHandler/DeleteLocation.deleteLocation",
@@ -7377,7 +7608,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "DeleteLocationLambdaVersion6XMti7S75MIGyqTIbR5jF6izml9zRpyJL1r7Dk"
+        "versionLogicalId": "DeleteLocationLambdaVersionglBeFFWsp79w0N3aVZVkWl6QVlca43kwJTD9N7KweA"
       },
       "getSports": {
         "handler": "handlers/SportsHandler/GetSports.getSports",
@@ -7413,7 +7644,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "GetSportsLambdaVersionYoKCTI3I2UHD9BIuypXOznBpibzpRqGEjSGNbrlg9y4"
+        "versionLogicalId": "GetSportsLambdaVersionBWgtGJu348WmNisscbrQhNRijfRfBBZX4xupfg1g"
       },
       "getOneSport": {
         "handler": "handlers/SportsHandler/GetOneSport.getOneSport",
@@ -7449,7 +7680,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "GetOneSportLambdaVersionLNVAqJnWYoomxu8ohM4BfazUJcU80rOhTPJpoD4ydk"
+        "versionLogicalId": "GetOneSportLambdaVersion0YaEQjU8uqwbAZHVWST6G0vfRVRScDgbzNGiKnuABjM"
       },
       "deleteSport": {
         "handler": "handlers/SportsHandler/DeleteSport.deleteSport",
@@ -7485,7 +7716,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "DeleteSportLambdaVersionALEIC1ctIdNPEctnfcvLcSnLZ11yZfMSiWA9dEOM"
+        "versionLogicalId": "DeleteSportLambdaVersionWvc0U1nRdB4pEC1CQ3iu7MlqLgN1iNHrTjYo1SI8VCQ"
       }
     },
     "configValidationMode": "warn",
@@ -7507,7 +7738,7 @@
     "artifact": "C:\\project_hobbies\\.serverless\\hobbies-app-ffe.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/hobbies-app-ffe/dev/1662992727768-2022-09-12T14:25:27.768Z",
+    "artifactDirectoryName": "serverless/hobbies-app-ffe/dev/1663058264318-2022-09-13T08:37:44.318Z",
     "artifact": "hobbies-app-ffe.zip"
   }
 }

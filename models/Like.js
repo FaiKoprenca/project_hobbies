@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+/*const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
@@ -17,18 +17,10 @@ const likeSchema = new Schema(
             type: Date,
             default: Date.now()
         },
-        /*postId: {
-            type: Schema.Types.ObjectId,
-            ref: 'Post'
-        },*/
-        /*commentId: {
-            type: Schema.Types.ObjectId,
-            ref: 'Comment'
-        }*/
     },
     {
         timeStamps: true
     }
 )
 
-module.exports = mongoose.model('Like', likeSchema);
+module.exports = mongoose.model('Like', likeSchema);*/

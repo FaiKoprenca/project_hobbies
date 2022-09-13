@@ -46,9 +46,12 @@ const PostSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    likes: {
+    /*likes: {
       type: Schema.Types.ObjectId,
       ref: "Like",
+    },*/
+    likes: {
+      type: Number,
     },
     comment: [
       {
