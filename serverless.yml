@@ -174,22 +174,6 @@ functions:
           path: like/comment/{id}
           method: post
           cors: true
-
-  getAllUserFollowers:
-    handler: handlers/FollowHandler/GetAllUserFollowers.getAllUserFollowers
-    events:
-      - http:
-          path: follow/user/{id}
-          method: get
-          cors: true
-
-  postFollowerAtUser:
-    handler: handlers/FollowHandler/PostFollowerAtUser.postFollowerAtUser
-    events:
-      - http:
-          path: follow/user/{id}
-          method: post
-          cors: true
           
   premiumPlan:
     handler: handlers/PaymentHandler/PremiumPlan.premiumPlan
