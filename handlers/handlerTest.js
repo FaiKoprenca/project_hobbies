@@ -61,7 +61,7 @@ module.exports.getUserById = async (event, context, callback) => {
 module.exports.postUser = async (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
 
-  const userID = event.pathParameters._id;  //TODO the logged user id 
+  //const userID = event.pathParameters._id;  //TODO the logged user id 
 
   const { username, location, bio } = JSON.parse(event.body);
 

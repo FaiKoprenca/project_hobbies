@@ -167,6 +167,14 @@ functions:
           method: post
           cors: true
 
+  follow:
+    handler: handlers/FollowHandler/Follow.follow
+    events:
+      - http:
+          path: followers/{followId}/{followedId}
+          method: post
+          cors: true
+
   postLikeAtComment:
     handler: handlers/handlerTest.postLikeAtComment
     events:
