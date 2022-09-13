@@ -25,6 +25,8 @@
     "mongoose": "^6.5.3",
     "nodemon": "^2.0.19",
     "serverless": "^3.22.0",
+    "serverless-plugin-common-excludes": "^4.0.0",
+    "serverless-plugin-include-dependencies": "^5.0.0",
     "validator": "^13.7.0"
   },
   "devDependencies": {

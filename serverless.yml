@@ -264,3 +264,4 @@ functions:
           cors: true 
 plugins:
   - serverless-offline
+  

@@ -1,8 +1,8 @@
-const connectToDatabase = require('../database/db');
-const User = require('../models/User');
-const Post = require('../models/Post');
-const Comment = require('../models/Comments');
-const Like = require('../models/Like');
+const connectToDatabase = require('../../database/db');
+const User = require('../../models/User');
+const Post = require('../../models/Post');
+const Comment = require('../../models/Comments');
+const Like = require('../../models/Like');
 
 //TODO FIX THIS ====> TO GET ALK THE COMMENTS FROM A SUSER
 
