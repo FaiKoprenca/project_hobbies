@@ -1,4 +1,4 @@
-service: hobbies-app
+service: hobbies-app-ffe
 provider:
   name: aws
   runtime: nodejs16.x
