@@ -3,9 +3,9 @@ const Schema = mongoose.Schema;
 
 const UserSchema = new mongoose.Schema(
   {
-    //TODO Cognito ID 
+    //TODO Cognito ID
     userCognitoId: {
-      type: String
+      type: String,
     },
     username: {
       type: String,
@@ -19,14 +19,12 @@ const UserSchema = new mongoose.Schema(
     },
     followed: [
       {
-        type: Schema.Types.ObjectId,
-        ref: "User",
+        type: String,
       },
     ],
     followers: [
       {
-        type: Schema.Types.ObjectId,
-        ref: "User",
+        type: String,
       },
     ],
     posts: [
@@ -35,10 +33,12 @@ const UserSchema = new mongoose.Schema(
         ref: "Post",
       },
     ],
-    comment: [{
-      type: Schema.Types.ObjectId,
-      ref: 'Comment'
-  }],
+    comment: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Comment",
+      },
+    ],
     /*likes: {
       type: Schema.Types.ObjectId,
       ref: "Like"
