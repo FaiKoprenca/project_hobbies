@@ -2,18 +2,25 @@ const connectToDatabase = require("../../database/db");
 const User = require("../../models/User");
 const Post = require("../../models/Post");
 
-module.exports.getJoinedUsers = async (event, context, callback) => {
+module.exports.unjoinPost = async (event, context, callback) => {
+
     context.callbackWaitsForEmptyEventLoop = false;
-    const id = event.pathParameters.id;
+
+    const userId = event.pathParameters.userId;
+    const postId = event.pathParameters.postId;
 
     try {
         await connectToDatabase();
 
-        const post = await Post.findById(id).populate("joined");
+        // const post = await Post.findById(postId);
+        const user = await User.findById(userId);
 
-        if (!post) {
-            callback(null, (404, `No post found with id: ${id}`));
-        }
+        const joinAtPost = await Post.findOneAndUpdate(
+            { _id: postId },
+            //{ $push: { joined: user._id } },
+            { $pull: { joined: userId } },
+            { new: true }
+        )
 
         return {
             headers: {
@@ -24,10 +31,10 @@ module.exports.getJoinedUsers = async (event, context, callback) => {
                 "Access-Control-Allow-Headers": "*"
             },
             statusCode: 200,
-            body: JSON.stringify(post.joined),
+            body: JSON.stringify("!!!!!!!!!!!!!!!!!")
         };
-
     } catch (error) {
         return (error);
     }
+
 }

@@ -1,6 +1,3 @@
-//TODO  serverless hander !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1  GET FUNCTION
-
-
 const connectToDatabase = require("../../database/db");
 const User = require("../../models/User");
 const Post = require("../../models/Post");
