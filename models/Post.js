@@ -46,14 +46,16 @@ const PostSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    /*likes: {
-      type: Schema.Types.ObjectId,
-      ref: "Like",
-    },*/
-    likes: {        //TODO     ------HANDLERS---------
+    likes: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+      }
+    ],
+    /*likes: {        //TODO     ------HANDLERS---------
       type: Number,
       default: 0
-    },
+    },*/
     joined: [
       {
         type: Schema.Types.ObjectId,
