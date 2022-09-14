@@ -286,6 +286,54 @@ functions:
           path: sports/{id}
           method: delete
           cors: true 
+
+  joinPost:
+    handler: handlers/JoinPostHandler/JoinPost.joinPost
+    events:
+      - http:
+          path: joinPost/{userId}/{postId}
+          method: get
+          cors: true
+
+  getJoinedUsers:
+    handler: handlers/JoinPostHandler/GetJoinedUsers.getJoinedUsers
+    events:
+      - http:
+          path: joined/users/{id}
+          method: get
+          cors: true
+
+  unjoinPost:
+    handler: handlers/JoinPostHandler/UnjoinPost.unjoinPost
+    events:
+      - http:
+          path: unjoinPost/{userId}/{postId}
+          method: get
+          cors: true
+
+  addLikeAtPost:
+    handler: handlers/LikeHandler/AddLikeAtPost.addLikeAtPost
+    events:
+      - http:
+          path: addLike/users/{userId}/{postId}
+          method: get
+          cors: true
+
+  removeLike:
+    handler: handlers/LikeHandler/RemoveLike.removeLike
+    events:
+      - http:
+          path: unLike/{userId}/{postId}
+          method: get
+          cors: true
+  
+  getLikes:
+    handler: handlers/LikeHandler/GetLikes.getLikes
+    events:
+      - http:
+          path: getLike/users/{id}
+          method: get
+          cors: true
 plugins:
   - serverless-offline
   - serverless-plugin-common-excludes

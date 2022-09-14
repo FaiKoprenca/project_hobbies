@@ -1,24 +1,19 @@
-const connectToDatabase = require("../../database/db");
+const connectToDatabase = require("../../database/db");    //TODO serverless handler -------------------------
 const User = require("../../models/User");
 const Post = require("../../models/Post");
 
-module.exports.joinPost = async (event, context, callback) => {
+module.exports.addLikeAtPost = async(event, context, callback) =>{
 
     context.callbackWaitsForEmptyEventLoop = false;
-
     const userId = event.pathParameters.userId;
     const postId = event.pathParameters.postId;
 
     try {
         await connectToDatabase();
 
-        // const post = await Post.findById(postId);
-        const user = await User.findById(userId);
-
-        const joinAtPost = await Post.findOneAndUpdate(
+        const likePost = await Post.findOneAndUpdate(
             { _id: postId },
-            //{ $push: { joined: user._id } },
-            { $push: { joined: userId } },
+            { $push: { likes: userId } },
             { new: true }
         )
 
@@ -33,8 +28,8 @@ module.exports.joinPost = async (event, context, callback) => {
             statusCode: 200,
             body: JSON.stringify("!!!!!!!!!!!!!!!!!")
         };
+        
     } catch (error) {
-        return (error);
+        return(error);
     }
-
 }

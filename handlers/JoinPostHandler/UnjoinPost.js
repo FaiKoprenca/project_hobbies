@@ -2,7 +2,7 @@ const connectToDatabase = require("../../database/db");
 const User = require("../../models/User");
 const Post = require("../../models/Post");
 
-module.exports.joinPost = async (event, context, callback) => {
+module.exports.unjoinPost = async (event, context, callback) => {
 
     context.callbackWaitsForEmptyEventLoop = false;
 
@@ -18,7 +18,7 @@ module.exports.joinPost = async (event, context, callback) => {
         const joinAtPost = await Post.findOneAndUpdate(
             { _id: postId },
             //{ $push: { joined: user._id } },
-            { $push: { joined: userId } },
+            { $pull: { joined: userId } },
             { new: true }
         )
 
