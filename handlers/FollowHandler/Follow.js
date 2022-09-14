@@ -4,7 +4,7 @@ const User = require("../../models/User");
 module.exports.follow = async (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
   const id = event.pathParameters.id;
-  const postId = event.pathParameters.postId;
+  const followersId = event.pathParameters.followersId;
   //const userId = event.queryStringParameters;
   // console.log(postId);
   // console.log(userId);
@@ -12,17 +12,11 @@ module.exports.follow = async (event, context, callback) => {
   try {
     await connectToDatabase();
     const user1 =await User.findOneAndUpdate(
-      {_id : postId},
+      {_id : followersId},
       {$push: {followers: id}},
       {new : true},
     );
     
-    
-    
-    
-    //const u2 =await User.findById(postId);
-
-
     callback(null, {
       headers: {
         "Content-Type": "application/json",

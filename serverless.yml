@@ -171,7 +171,15 @@ functions:
     handler: handlers/FollowHandler/Follow.follow
     events:
       - http:
-          path: followers/{id}/{postId}
+          path: followers/{id}/{followersId}
+          method: get
+          cors: true
+
+  unfollow:
+    handler: handlers/FollowHandler/Unfollow.unfollow
+    events:
+      - http:
+          path: unfollow/{id}/{followersId}
           method: get
           cors: true
 
@@ -180,6 +188,14 @@ functions:
     events:
       - http:
           path: followers/{id}
+          method: get
+          cors: true
+
+  getYourFollowers:
+    handler: handlers/FollowHandler/GetYourFollowers.getYourFollowers
+    events:
+      - http:
+          path: yourfollowers/{id}
           method: get
           cors: true
 
