@@ -171,9 +171,18 @@ functions:
     handler: handlers/FollowHandler/Follow.follow
     events:
       - http:
-          path: followers/{id}/{_id}
-          method: post
+          path: followers/{id}/{postId}
+          method: get
           cors: true
+
+  getSomeoneFollowers:
+    handler: handlers/FollowHandler/GetSomeoneFollowers.getSomeoneFollowers
+    events:
+      - http:
+          path: followers/{id}
+          method: get
+          cors: true
+
 
   postLikeAtComment:
     handler: handlers/handlerTest.postLikeAtComment
