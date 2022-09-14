@@ -263,6 +263,22 @@ functions:
           path: sports/{id}
           method: delete
           cors: true 
+
+  joinPost:
+    handler: handlers/JoinPostHandler/JoinPost.joinPost
+    events:
+      - http:
+          path: joinPost/{userId}/{postId}
+          method: get
+          cors: true
+
+  getJoinedUsers:
+    handler: handlers/JoinPostHandler/GetJoinedUsers.getJoinedUsers
+    events:
+      - http:
+          path: joined/users/{id}
+          method: get
+          cors: true
 plugins:
   - serverless-offline
   - serverless-plugin-common-excludes
