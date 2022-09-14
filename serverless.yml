@@ -295,6 +295,14 @@ functions:
           path: joined/users/{id}
           method: get
           cors: true
+
+  unjoinPost:
+    handler: handlers/JoinPostHandler/UnjoinPost.unjoinPost
+    events:
+      - http:
+          path: unjoinPost/{userId}/{postId}
+          method: get
+          cors: true
 plugins:
   - serverless-offline
   - serverless-plugin-common-excludes
