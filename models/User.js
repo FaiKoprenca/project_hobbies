@@ -19,12 +19,14 @@ const UserSchema = new mongoose.Schema(
     },
     followed: [
       {
-        type: String,
+        type: Schema.Types.ObjectId,
+        ref: "User",
       },
     ],
     followers: [
       {
-        type: String,
+        type: Schema.Types.ObjectId,
+        ref: "User",
       },
     ],
     posts: [
