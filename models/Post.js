@@ -19,9 +19,7 @@ const PostSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    //maybe another locationTag and sportsTag model for queries
     tags: [
-      //{type:String}
       {
         type: Schema.Types.ObjectId,
         ref: "LocationTag",
@@ -39,9 +37,6 @@ const PostSchema = new mongoose.Schema(
       type: String,
       //required: true,
     },
-    /*endTime: {
-      type: String,
-    },*/
     limit: {
       type: Number,
       required: true,
@@ -52,10 +47,6 @@ const PostSchema = new mongoose.Schema(
         ref: "User",
       }
     ],
-    /*likes: {        //TODO     ------HANDLERS---------
-      type: Number,
-      default: 0
-    },*/
     joined: [
       {
         type: Schema.Types.ObjectId,
@@ -73,7 +64,7 @@ const PostSchema = new mongoose.Schema(
         date: { type: Date, default: Date.now() },
         userId: { type: Schema.Types.ObjectId, ref: "User" },
       },
-    ], //front end type of event: indoor or outdoor
+    ],
   },
   {
     timeStamps: true,

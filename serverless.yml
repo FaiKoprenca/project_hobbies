@@ -327,6 +327,14 @@ functions:
           path: getLike/users/{id}
           method: get
           cors: true
+
+  checkUserExists:
+    handler: handlers/UserHandler/CheckIfUserExists.checkUserExists
+    events:
+      - http:
+          path: chechandpost/user/{cognitoId}
+          method: post
+          cors: true
 plugins:
   - serverless-offline
   - serverless-plugin-common-excludes
