@@ -56,7 +56,8 @@ const PostSchema = new mongoose.Schema(
     },
     joined: [
       {
-        type: String,
+        type: Schema.Types.ObjectId,
+        ref: "User"
       }
     ],
     comment: [
