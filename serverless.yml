@@ -199,6 +199,13 @@ functions:
           method: get
           cors: true
 
+  search:
+    handler: handlers/SearchHandler/Search.search
+    events:
+      - http:
+          path: searchParams
+          method: get
+          cors: true
 
   postLikeAtComment:
     handler: handlers/handlerTest.postLikeAtComment
