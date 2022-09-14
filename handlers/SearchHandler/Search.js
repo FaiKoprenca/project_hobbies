@@ -1,8 +1,8 @@
 const connectToDatabase = require("../../database/db");
 const Post = require("../../models/Post");
-const LocationTag = require("../../models/LocationTag");
+const User = require("../../models/User");
 
-module.exports.getPostByLocationOrSport = async (event, context, callback) => {
+module.exports.search = async (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
 
   try {
@@ -10,9 +10,21 @@ module.exports.getPostByLocationOrSport = async (event, context, callback) => {
     //const querystring = event.queryStringParameters;
     const querystring = event.queryStringParameters;
     let filter = {};
-    filter = querystring.tags;
+    filter = querystring.searchQuery;
 
-    let post = await Post.find({"tags":filter});
+    const post = await Post.find({
+      $or: [{ username: { $regex: filter } }, { text: { $regex: filter } }],
+    });
+
+    const user = await User.find({
+      $or: [
+        { username: { $regex: filter, $options: "i" } },
+
+      ],
+    });
+    if (!user) {
+      callback(null, (404, "No users Found."));
+    }
 
     if (!post) {
       callback(null, (404, "No posts Found."));
@@ -27,7 +39,7 @@ module.exports.getPostByLocationOrSport = async (event, context, callback) => {
         "Access-Control-Allow-Headers": "*",
       },
       statusCode: 200,
-      body: JSON.stringify(post),
+      body: JSON.stringify(user),
     });
   } catch (error) {
     return error;
