@@ -13,12 +13,12 @@ module.exports.postPostAtUser = async (event, context, callback) => {
   //   return res.status(400).json(errors);
   // }
 
-  const { username, text,tags, date, startTime, limit } = JSON.parse(
+  const { postCognitoId, username, text,tags, date, startTime, limit } = JSON.parse(
     event.body
   );
 
   const post = new Post({
-    //userId,
+    postCognitoId,
     username,
     text,
     tags,

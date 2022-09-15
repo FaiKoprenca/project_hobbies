@@ -4,13 +4,13 @@ const User = require('../../models/User');
 
 module.exports.getUserByCognitoId = async (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;
-    const cognitoId = event.body.cognitoId;      //check 
+    const cognitoId = event.pathParameters.cognitoId;      //check 
     console.log(cognitoId , " id here");
   
     try {
       await connectToDatabase();
       const user = await User.findOne(
-        {userCognitoId:id}
+        {userCognitoId : cognitoId}
         )
       //.populate("posts");
   
