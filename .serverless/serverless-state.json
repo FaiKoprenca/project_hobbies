@@ -420,7 +420,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/UserHandler/GetUsers.getUsers",
               "Runtime": "nodejs16.x",
@@ -445,7 +445,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/UserHandler/GetOneUser.getUserById",
               "Runtime": "nodejs16.x",
@@ -470,7 +470,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/handlerTest.postUser",
               "Runtime": "nodejs16.x",
@@ -495,7 +495,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/UserHandler/UpdateUser.updateUser",
               "Runtime": "nodejs16.x",
@@ -520,7 +520,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/UserHandler/DeleteUser.deleteUser",
               "Runtime": "nodejs16.x",
@@ -545,7 +545,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/PostHandler/CreatePostAtUser.postPostAtUser",
               "Runtime": "nodejs16.x",
@@ -570,7 +570,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/PostHandler/GetPostByUserId.getPostsByUserId",
               "Runtime": "nodejs16.x",
@@ -595,7 +595,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/PostHandler/GetOnePost.getOnePost",
               "Runtime": "nodejs16.x",
@@ -620,7 +620,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/PostHandler/GetAllPosts.getAllPosts",
               "Runtime": "nodejs16.x",
@@ -645,7 +645,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/PostHandler/GetPostsByTag.getPostsByTag",
               "Runtime": "nodejs16.x",
@@ -670,7 +670,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/PostHandler/GetPostByLocationOrSport.getPostByLocationOrSport",
               "Runtime": "nodejs16.x",
@@ -695,7 +695,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/PostHandler/UpdatePost.updatePost",
               "Runtime": "nodejs16.x",
@@ -720,7 +720,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/PostHandler/DeletePost.deletePost",
               "Runtime": "nodejs16.x",
@@ -745,7 +745,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/CommentsHandler/PostCommentAtPost.postCommentAtPost",
               "Runtime": "nodejs16.x",
@@ -770,7 +770,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/CommentsHandler/GetCommentsAtPost.getCommentsAtPost",
               "Runtime": "nodejs16.x",
@@ -795,7 +795,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/CommentsHandler/GetOneComment.getOneComment",
               "Runtime": "nodejs16.x",
@@ -820,7 +820,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/CommentsHandler/UpdateComment.updateComment",
               "Runtime": "nodejs16.x",
@@ -845,7 +845,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/CommentsHandler/DeleteComment.deleteComment",
               "Runtime": "nodejs16.x",
@@ -870,7 +870,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/CommentsHandler/GetCommentsByUserId.getCommentsByUserId",
               "Runtime": "nodejs16.x",
@@ -895,7 +895,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/handlerTest.postLikeAtPost",
               "Runtime": "nodejs16.x",
@@ -920,7 +920,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/FollowHandler/Follow.follow",
               "Runtime": "nodejs16.x",
@@ -945,7 +945,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/FollowHandler/Unfollow.unfollow",
               "Runtime": "nodejs16.x",
@@ -970,7 +970,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/FollowHandler/GetSomeoneFollowers.getSomeoneFollowers",
               "Runtime": "nodejs16.x",
@@ -995,7 +995,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/FollowHandler/GetYourFollowers.getYourFollowers",
               "Runtime": "nodejs16.x",
@@ -1020,7 +1020,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/SearchHandler/Search.search",
               "Runtime": "nodejs16.x",
@@ -1045,7 +1045,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/handlerTest.postLikeAtComment",
               "Runtime": "nodejs16.x",
@@ -1070,7 +1070,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/PaymentHandler/PremiumPlan.premiumPlan",
               "Runtime": "nodejs16.x",
@@ -1095,7 +1095,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/PredefinedHandler/AddLocations.addLocations",
               "Runtime": "nodejs16.x",
@@ -1120,7 +1120,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/PredefinedHandler/AddSports.addSports",
               "Runtime": "nodejs16.x",
@@ -1145,7 +1145,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/LocationHandler/GetLocations.getLocations",
               "Runtime": "nodejs16.x",
@@ -1170,7 +1170,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/LocationHandler/GetOneLocation.getOneLocation",
               "Runtime": "nodejs16.x",
@@ -1195,7 +1195,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/LocationHandler/DeleteLocation.deleteLocation",
               "Runtime": "nodejs16.x",
@@ -1220,7 +1220,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/SportsHandler/GetSports.getSports",
               "Runtime": "nodejs16.x",
@@ -1245,7 +1245,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/SportsHandler/GetOneSport.getOneSport",
               "Runtime": "nodejs16.x",
@@ -1270,7 +1270,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/SportsHandler/DeleteSport.deleteSport",
               "Runtime": "nodejs16.x",
@@ -1295,7 +1295,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/JoinPostHandler/JoinPost.joinPost",
               "Runtime": "nodejs16.x",
@@ -1320,7 +1320,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/JoinPostHandler/GetJoinedUsers.getJoinedUsers",
               "Runtime": "nodejs16.x",
@@ -1345,7 +1345,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/JoinPostHandler/UnjoinPost.unjoinPost",
               "Runtime": "nodejs16.x",
@@ -1370,7 +1370,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/LikeHandler/AddLikeAtPost.addLikeAtPost",
               "Runtime": "nodejs16.x",
@@ -1395,7 +1395,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/LikeHandler/RemoveLike.removeLike",
               "Runtime": "nodejs16.x",
@@ -1420,7 +1420,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/LikeHandler/GetLikes.getLikes",
               "Runtime": "nodejs16.x",
@@ -1445,7 +1445,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+                "S3Key": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z/hobbies-app-ffe.zip"
               },
               "Handler": "handlers/UserHandler/CheckIfUserExists.checkUserExists",
               "Runtime": "nodejs16.x",
@@ -6626,7 +6626,7 @@
               "CheckUserExistsLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1663230965354": {
+          "ApiGatewayDeployment1663231175129": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -10312,7 +10312,7 @@
     "artifact": "C:\\project_hobbies\\.serverless\\hobbies-app-ffe.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z",
+    "artifactDirectoryName": "serverless/hobbies-app-ffe/dev/1663231189785-2022-09-15T08:39:49.785Z",
     "artifact": "hobbies-app-ffe.zip"
   }
 }
