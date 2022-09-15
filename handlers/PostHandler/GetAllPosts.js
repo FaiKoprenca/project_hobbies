@@ -29,7 +29,7 @@ module.exports.getAllPosts = async (event, context, callback) => {
                 "Access-Control-Allow-Headers": "*"
             },
             statusCode: 200,
-            body: JSON.stringify({totalPages: totalPages, post : post}),
+            body: JSON.stringify({post : post}),
         });
     } catch (error) {
         return(error);
