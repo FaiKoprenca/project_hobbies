@@ -22,6 +22,14 @@ functions:
           path: user/{id}
           method: get
           cors: true
+  
+  getUserByCognitoId:
+    handler: handlers/UserHandler/GetUsersByCognitoId.getUserByCognitoId
+    events:
+      - http:
+          path: userCognitoForErikWithLove
+          method: get
+          cors: true
 
   postUser:
     handler: handlers/handlerTest.postUser
