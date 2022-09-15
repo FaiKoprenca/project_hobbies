@@ -191,6 +191,36 @@
         "LogGroupName": "/aws/lambda/hobbies-app-ffe-dev-postLikeAtPost"
       }
     },
+    "FollowLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/hobbies-app-ffe-dev-follow"
+      }
+    },
+    "UnfollowLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/hobbies-app-ffe-dev-unfollow"
+      }
+    },
+    "GetSomeoneFollowersLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/hobbies-app-ffe-dev-getSomeoneFollowers"
+      }
+    },
+    "GetYourFollowersLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/hobbies-app-ffe-dev-getYourFollowers"
+      }
+    },
+    "SearchLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/hobbies-app-ffe-dev-search"
+      }
+    },
     "PostLikeAtCommentLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
@@ -249,6 +279,48 @@
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
         "LogGroupName": "/aws/lambda/hobbies-app-ffe-dev-deleteSport"
+      }
+    },
+    "JoinPostLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/hobbies-app-ffe-dev-joinPost"
+      }
+    },
+    "GetJoinedUsersLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/hobbies-app-ffe-dev-getJoinedUsers"
+      }
+    },
+    "UnjoinPostLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/hobbies-app-ffe-dev-unjoinPost"
+      }
+    },
+    "AddLikeAtPostLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/hobbies-app-ffe-dev-addLikeAtPost"
+      }
+    },
+    "RemoveLikeLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/hobbies-app-ffe-dev-removeLike"
+      }
+    },
+    "GetLikesLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/hobbies-app-ffe-dev-getLikes"
+      }
+    },
+    "CheckUserExistsLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/hobbies-app-ffe-dev-checkUserExists"
       }
     },
     "IamRoleLambdaExecution": {
@@ -335,7 +407,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/UserHandler/GetUsers.getUsers",
         "Runtime": "nodejs16.x",
@@ -360,7 +432,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/UserHandler/GetOneUser.getUserById",
         "Runtime": "nodejs16.x",
@@ -385,7 +457,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/handlerTest.postUser",
         "Runtime": "nodejs16.x",
@@ -410,7 +482,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/UserHandler/UpdateUser.updateUser",
         "Runtime": "nodejs16.x",
@@ -435,7 +507,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/UserHandler/DeleteUser.deleteUser",
         "Runtime": "nodejs16.x",
@@ -460,7 +532,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/PostHandler/CreatePostAtUser.postPostAtUser",
         "Runtime": "nodejs16.x",
@@ -485,7 +557,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/PostHandler/GetPostByUserId.getPostsByUserId",
         "Runtime": "nodejs16.x",
@@ -510,7 +582,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/PostHandler/GetOnePost.getOnePost",
         "Runtime": "nodejs16.x",
@@ -535,7 +607,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/PostHandler/GetAllPosts.getAllPosts",
         "Runtime": "nodejs16.x",
@@ -560,7 +632,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/PostHandler/GetPostsByTag.getPostsByTag",
         "Runtime": "nodejs16.x",
@@ -585,7 +657,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/PostHandler/GetPostByLocationOrSport.getPostByLocationOrSport",
         "Runtime": "nodejs16.x",
@@ -610,7 +682,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/PostHandler/UpdatePost.updatePost",
         "Runtime": "nodejs16.x",
@@ -635,7 +707,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/PostHandler/DeletePost.deletePost",
         "Runtime": "nodejs16.x",
@@ -660,7 +732,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/CommentsHandler/PostCommentAtPost.postCommentAtPost",
         "Runtime": "nodejs16.x",
@@ -685,7 +757,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/CommentsHandler/GetCommentsAtPost.getCommentsAtPost",
         "Runtime": "nodejs16.x",
@@ -710,7 +782,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/CommentsHandler/GetOneComment.getOneComment",
         "Runtime": "nodejs16.x",
@@ -735,7 +807,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/CommentsHandler/UpdateComment.updateComment",
         "Runtime": "nodejs16.x",
@@ -760,7 +832,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/CommentsHandler/DeleteComment.deleteComment",
         "Runtime": "nodejs16.x",
@@ -785,7 +857,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/CommentsHandler/GetCommentsByUserId.getCommentsByUserId",
         "Runtime": "nodejs16.x",
@@ -810,7 +882,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/handlerTest.postLikeAtPost",
         "Runtime": "nodejs16.x",
@@ -828,6 +900,131 @@
         "PostLikeAtPostLogGroup"
       ]
     },
+    "FollowLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "ServerlessDeploymentBucket"
+          },
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+        },
+        "Handler": "handlers/FollowHandler/Follow.follow",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "hobbies-app-ffe-dev-follow",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "FollowLogGroup"
+      ]
+    },
+    "UnfollowLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "ServerlessDeploymentBucket"
+          },
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+        },
+        "Handler": "handlers/FollowHandler/Unfollow.unfollow",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "hobbies-app-ffe-dev-unfollow",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "UnfollowLogGroup"
+      ]
+    },
+    "GetSomeoneFollowersLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "ServerlessDeploymentBucket"
+          },
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+        },
+        "Handler": "handlers/FollowHandler/GetSomeoneFollowers.getSomeoneFollowers",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "hobbies-app-ffe-dev-getSomeoneFollowers",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "GetSomeoneFollowersLogGroup"
+      ]
+    },
+    "GetYourFollowersLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "ServerlessDeploymentBucket"
+          },
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+        },
+        "Handler": "handlers/FollowHandler/GetYourFollowers.getYourFollowers",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "hobbies-app-ffe-dev-getYourFollowers",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "GetYourFollowersLogGroup"
+      ]
+    },
+    "SearchLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "ServerlessDeploymentBucket"
+          },
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+        },
+        "Handler": "handlers/SearchHandler/Search.search",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "hobbies-app-ffe-dev-search",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "SearchLogGroup"
+      ]
+    },
     "PostLikeAtCommentLambdaFunction": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
@@ -835,7 +1032,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/handlerTest.postLikeAtComment",
         "Runtime": "nodejs16.x",
@@ -860,7 +1057,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/PaymentHandler/PremiumPlan.premiumPlan",
         "Runtime": "nodejs16.x",
@@ -885,7 +1082,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/PredefinedHandler/AddLocations.addLocations",
         "Runtime": "nodejs16.x",
@@ -910,7 +1107,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/PredefinedHandler/AddSports.addSports",
         "Runtime": "nodejs16.x",
@@ -935,7 +1132,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/LocationHandler/GetLocations.getLocations",
         "Runtime": "nodejs16.x",
@@ -960,7 +1157,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/LocationHandler/GetOneLocation.getOneLocation",
         "Runtime": "nodejs16.x",
@@ -985,7 +1182,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/LocationHandler/DeleteLocation.deleteLocation",
         "Runtime": "nodejs16.x",
@@ -1010,7 +1207,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/SportsHandler/GetSports.getSports",
         "Runtime": "nodejs16.x",
@@ -1035,7 +1232,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/SportsHandler/GetOneSport.getOneSport",
         "Runtime": "nodejs16.x",
@@ -1060,7 +1257,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hobbies-app-ffe/dev/1663061082430-2022-09-13T09:24:42.430Z/hobbies-app-ffe.zip"
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
         },
         "Handler": "handlers/SportsHandler/DeleteSport.deleteSport",
         "Runtime": "nodejs16.x",
@@ -1078,304 +1275,599 @@
         "DeleteSportLogGroup"
       ]
     },
-    "GetUsersLambdaVersionB44Hnxd9cCzCak0XeyeFivDq71D9i1F8PA1dieNQqqY": {
+    "JoinPostLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "ServerlessDeploymentBucket"
+          },
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+        },
+        "Handler": "handlers/JoinPostHandler/JoinPost.joinPost",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "hobbies-app-ffe-dev-joinPost",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "JoinPostLogGroup"
+      ]
+    },
+    "GetJoinedUsersLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "ServerlessDeploymentBucket"
+          },
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+        },
+        "Handler": "handlers/JoinPostHandler/GetJoinedUsers.getJoinedUsers",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "hobbies-app-ffe-dev-getJoinedUsers",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "GetJoinedUsersLogGroup"
+      ]
+    },
+    "UnjoinPostLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "ServerlessDeploymentBucket"
+          },
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+        },
+        "Handler": "handlers/JoinPostHandler/UnjoinPost.unjoinPost",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "hobbies-app-ffe-dev-unjoinPost",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "UnjoinPostLogGroup"
+      ]
+    },
+    "AddLikeAtPostLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "ServerlessDeploymentBucket"
+          },
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+        },
+        "Handler": "handlers/LikeHandler/AddLikeAtPost.addLikeAtPost",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "hobbies-app-ffe-dev-addLikeAtPost",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "AddLikeAtPostLogGroup"
+      ]
+    },
+    "RemoveLikeLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "ServerlessDeploymentBucket"
+          },
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+        },
+        "Handler": "handlers/LikeHandler/RemoveLike.removeLike",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "hobbies-app-ffe-dev-removeLike",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "RemoveLikeLogGroup"
+      ]
+    },
+    "GetLikesLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "ServerlessDeploymentBucket"
+          },
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+        },
+        "Handler": "handlers/LikeHandler/GetLikes.getLikes",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "hobbies-app-ffe-dev-getLikes",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "GetLikesLogGroup"
+      ]
+    },
+    "CheckUserExistsLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "ServerlessDeploymentBucket"
+          },
+          "S3Key": "serverless/hobbies-app-ffe/dev/1663230986750-2022-09-15T08:36:26.750Z/hobbies-app-ffe.zip"
+        },
+        "Handler": "handlers/UserHandler/CheckIfUserExists.checkUserExists",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "hobbies-app-ffe-dev-checkUserExists",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "CheckUserExistsLogGroup"
+      ]
+    },
+    "GetUsersLambdaVersionIy9yu9fuq54nbQ0ZrL500J4OrVacPmJvb30R9LfI": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetUsersLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "GetUserByIdLambdaVersion1eSFWvSpr0FxseeN8HssnXQ63G2Ee4f5sgrD5ivk": {
+    "GetUserByIdLambdaVersion2Q6R0fsJvIZeYFIS4Dpuhm18dIf6Grz0de7OaEeZBj0": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetUserByIdLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "PostUserLambdaVersionoO9JAguj9NATLGqnIak6gCzt3VhboUmVXh77mC0uw": {
+    "PostUserLambdaVersionl5IazlSSyKgZyJwvJeKzjcoz51Sw3LLWGI5APa1ak": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "PostUserLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "UpdateUserLambdaVersionfsNc5RQcjDeoq8H00PbxnnGviK6IDnVEmYy3tD1r8": {
+    "UpdateUserLambdaVersionYujQSodAdMReQ4QzqH5Iigze5ra72v6ablzi6I7tk": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "UpdateUserLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "DeleteUserLambdaVersion2ppzfs7MbOSeNGOj5APefzWIH5Es4NFiaUNM0Wy4Zw": {
+    "DeleteUserLambdaVersionPvPfGNtfI9JKi8nvEmlv8UYh0Kw6ZJzS7L9LFzifs": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "DeleteUserLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "PostPostAtUserLambdaVersiongegq9HAgrt03QdO25wp2o3rTed8muO2mHEmYmgQvys": {
+    "PostPostAtUserLambdaVersionpnbd1mTP2ovZXUQ6yAHYylTR5vCtwyjYa6janzjnF1M": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "PostPostAtUserLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "GetPostsByUserIdLambdaVersionp92b6ZfPIvit0sTtuNf3iO5jHyQxSK8Muh14KHkGmI": {
+    "GetPostsByUserIdLambdaVersionSd55JLGkXee9pH0ctTudLSdzBszPcL3Y1wgOw27xvE": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetPostsByUserIdLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "GetOnePostLambdaVersionXuMR19RbXTFVnNWf1dNSxtnCyFpauoTCbyBInC9Kw": {
+    "GetOnePostLambdaVersionBZbApN0hkEKLO6CyxMF61nsvTuLm2t0pcgCxOyyhM": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetOnePostLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "GetAllPostsLambdaVersionQ7R75JIZQxzPrS2KTx5sLV4IWI0OWdAz7sffrE8ikLM": {
+    "GetAllPostsLambdaVersion6snbWEkrT86zAGyEf55CmXygygNRxXsjqMdNAESxgc": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetAllPostsLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "GetPostsByTagLambdaVersionrwAE9NeCxhYtfXyFN2cFTdfLskFYZgsWwvz2XhlZNw": {
+    "GetPostsByTagLambdaVersiongnNbL8NmOqQzlx16hCfTvdkVJ8EbvaUUTPXLY4bV8": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetPostsByTagLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "GetPostByLocationOrSportLambdaVersionXa8fJlF6awNXsVGUOCDz1KTbOJnFRhwmRII9ryM": {
+    "GetPostByLocationOrSportLambdaVersion1NiuuYilG6zO6aeer7xwLNFYkufoFmFmUbrDYpCum4": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetPostByLocationOrSportLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "UpdatePostLambdaVersionUU0ZXpHy699JNlBiwwXNKhAK8xVaVX9bHN7zHCPgM": {
+    "UpdatePostLambdaVersionCfxgBJZEyHxP3qwDIRmzVDKeB0yZ1RBIfECRHm3oJk": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "UpdatePostLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "DeletePostLambdaVersion7Zsfr1JPTMwk3V38qEytW85Gv4eL53dSGggZ5z8i0c": {
+    "DeletePostLambdaVersionYqOXYCrIFM89hwoc8ckoea7VbHhAIFz8uyvWdYlNw4w": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "DeletePostLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "PostCommentAtPostLambdaVersionQteR0J9mltBZuFEYCYafVUk5nIXyxOINyAaYszbA": {
+    "PostCommentAtPostLambdaVersion50wOjYCvlOJkRhUD1fIlPIhSDsXjOGFhy0kF1JNbM": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "PostCommentAtPostLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "GetCommentsAtPostLambdaVersionVIQ1wgjcMMmpogwyRiFlv010tz8vjPDsaAVJj5Bnq8": {
+    "GetCommentsAtPostLambdaVersionqKQEdWfDQZSXcTTS9ouazH65OqCmtfxwipjUFkPw": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetCommentsAtPostLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "GetOneCommentLambdaVersionPPZ5WN8S7cA576W41xj1ItHmpVjDciioqixl62KcdI": {
+    "GetOneCommentLambdaVersioniCd6yGOwqNF3V1IviFia1vk3zgZY3aeanJXIt4uGfQ": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetOneCommentLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "UpdateCommentLambdaVersiond1PiAdgJXYnX7G2y6aA0mLkeHpCSAxAzBpdPpGrwtQ": {
+    "UpdateCommentLambdaVersion1D1DJVcEcbCFVoQLMvUayTDt0erQaA3WTt4vPWE1rM": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "UpdateCommentLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "DeleteCommentLambdaVersionnveUMj4Galm1b2hc4DI6jkH6kO16aFyWASBGwDdM": {
+    "DeleteCommentLambdaVersionYmRBowpupcfVKNtH9fHEST2KfQpNLD6cXVbSyty1jQg": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "DeleteCommentLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "GetCommentsByUserIdLambdaVersionoQjEYMde5ES2CFvt2yrJtag37Epl1qWmQoXeHvKtP0": {
+    "GetCommentsByUserIdLambdaVersionGwMU0AidAklEfXP2T3Igi3leUm2RInqPudP3zhZTs": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetCommentsByUserIdLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "PostLikeAtPostLambdaVersionoANBjYob93294QRcffvrvaQ7suu9csgE3iyCW5rSZts": {
+    "PostLikeAtPostLambdaVersionzkeT0gltOkSy3c8kzLFHSFuVA848O9ZBmubAWWg6e8": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "PostLikeAtPostLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "PostLikeAtCommentLambdaVersionr4aFgeg5tCCXmKnSPU6kP9IP7VtDkR3MfKvDJpTXM": {
+    "FollowLambdaVersionY8gsr3OVNphP8SZJs02yR94nlFjMkxiC6rIwNvubQ": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "FollowLambdaFunction"
+        },
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
+      }
+    },
+    "UnfollowLambdaVersionZ521ouSBO0kO2k1DKn3VCbudGxq0CWE2yXL1hKaeo": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "UnfollowLambdaFunction"
+        },
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
+      }
+    },
+    "GetSomeoneFollowersLambdaVersion9fQzTvSPoFctEIEsVFRVLbLbqiGftt6Tny8K5fCtTw": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "GetSomeoneFollowersLambdaFunction"
+        },
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
+      }
+    },
+    "GetYourFollowersLambdaVersionYN8jkhKlGRw5jXvEGG36vXF1GVUiSFkuufeMowquiI": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "GetYourFollowersLambdaFunction"
+        },
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
+      }
+    },
+    "SearchLambdaVersionminOTcIqlKzabHaHOmh0dVif0qmkiTGBbaeiTYU": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "SearchLambdaFunction"
+        },
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
+      }
+    },
+    "PostLikeAtCommentLambdaVersioneiLP8c5J0Pt3dS8oBFh0QsiKKybzfinlRQxyphdc": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "PostLikeAtCommentLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "PremiumPlanLambdaVersion2kdDRmtZvJIV1pspWF89VEUYwJNFgNSPx7N4QO38ck": {
+    "PremiumPlanLambdaVersionjVk5BeyMzNHQ20K0CntN4lxbqkBfF3hmdrnYCVS9k": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "PremiumPlanLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "AddLocationsLambdaVersion6zVfiRYgkukgS0DoXQ0UiTf1qkijVMIZkcxnhZ6e0g": {
+    "AddLocationsLambdaVersionBYF7Tp88ysOHYc8dPJmdytkw2F8NUE0J1nms2a2hCo": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "AddLocationsLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "AddSportsLambdaVersionnamSqIn00WjNHiDGY1DV3jUwDTipXSFenjbhlWaLcPg": {
+    "AddSportsLambdaVersiongGqYeFyhvXYIkqCCV5NcMBJtgyFx3l3k4LAmsgyo": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "AddSportsLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "GetLocationsLambdaVersionZMeBGE4HuNPcxHZduAJOSwN510Y26wMXd13YN4RC5U": {
+    "GetLocationsLambdaVersioneHn7nOqrhM2lG6fawqdHKKST9DhE7ohmAnFLwMr08I": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetLocationsLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "GetOneLocationLambdaVersionPFeJknpY3N58dRcZNKEPJRhDTUCo04x21azB0KgiRSE": {
+    "GetOneLocationLambdaVersion0aIulyhdLIaRqrm6KhpVli4S2ZoX1pWBAi7ejPWnCk": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetOneLocationLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "DeleteLocationLambdaVersionJlnpMhf0IXOkMcLI57A7uGyFsc2IentBIEWVoSpbzes": {
+    "DeleteLocationLambdaVersionCpCrgghMTAv24URGfBf4ftxbaeDglcBCODKpvC08A4": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "DeleteLocationLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "GetSportsLambdaVersionZj0ZtHBBEJtT7ze0CSq2CNPvOUW3Tp9UWwkh5iBI": {
+    "GetSportsLambdaVersion3QzMvbxnd25FCZ17yn8GXbl0kKEtqchkX6PsdcD6o48": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetSportsLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "GetOneSportLambdaVersionFT6iEDRTbm8Oq4qixcGwX87P2WMf1Okn5o8RC3T9eg": {
+    "GetOneSportLambdaVersion4hVSKTE3z3bSWT5fgYKFhQOAM1A1vJBymvym8AwwRo": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetOneSportLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
-    "DeleteSportLambdaVersiondLPB1dTmIRpYYo7vDx38oxofOMaYUKD6opQui96Ns": {
+    "DeleteSportLambdaVersionwI0iDSRKjIVSpPJ1h8xfgTy01JhREvLyw93NkwxrU": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "DeleteSportLambdaFunction"
         },
-        "CodeSha256": "0Gfsy65tjTdyAAcs6vDnn5zG71K7xoO18QiEj8/NIUM="
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
+      }
+    },
+    "JoinPostLambdaVersionC9X9P65DHANa8PujY3T0A1u7nNmlQDCQRG1sKBE": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "JoinPostLambdaFunction"
+        },
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
+      }
+    },
+    "GetJoinedUsersLambdaVersionNwqhybTnL15RjKL1cZAGbmc8XrJ3lEvnFxSgLP17lU": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "GetJoinedUsersLambdaFunction"
+        },
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
+      }
+    },
+    "UnjoinPostLambdaVersionRl90w2hVBucFuuRqs44tiTVyBf6SxMQrhtV32XWKICY": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "UnjoinPostLambdaFunction"
+        },
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
+      }
+    },
+    "AddLikeAtPostLambdaVersionQ48MtSKLSSfkJ2ZJn54yprKm45Hf7rUN3b1Y6ths2M": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AddLikeAtPostLambdaFunction"
+        },
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
+      }
+    },
+    "RemoveLikeLambdaVersionJkfL1H3eLiy9tfmRlcV7KVYVp8KSIFQy5cr9d1Uz5qo": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "RemoveLikeLambdaFunction"
+        },
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
+      }
+    },
+    "GetLikesLambdaVersionbGrG1h9Lt8PdqZef8bRZJRZozcRZOvEO8lEWlIeeAI": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "GetLikesLambdaFunction"
+        },
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
+      }
+    },
+    "CheckUserExistsLambdaVersionBw5141rhlpW3LdLCm0E4cykHdkWl7uJ2icO5DP3NNg": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "CheckUserExistsLambdaFunction"
+        },
+        "CodeSha256": "lftbaUByCIhIezKSPdkjDWipxihrmxq3EuUOCX+dmiM="
       }
     },
     "ApiGatewayRestApi": {
@@ -1873,6 +2365,126 @@
         }
       }
     },
+    "ApiGatewayResourceFollowers": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "followers",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceFollowersIdVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceFollowers"
+        },
+        "PathPart": "{id}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceFollowersIdVarFollowersidVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceFollowersIdVar"
+        },
+        "PathPart": "{followersId}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceUnfollow": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "unfollow",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceUnfollowIdVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceUnfollow"
+        },
+        "PathPart": "{id}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceUnfollowIdVarFollowersidVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceUnfollowIdVar"
+        },
+        "PathPart": "{followersId}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceYourfollowers": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "yourfollowers",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceYourfollowersIdVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceYourfollowers"
+        },
+        "PathPart": "{id}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceSearchparams": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "searchParams",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
     "ApiGatewayResourcePayment": {
       "Type": "AWS::ApiGateway::Resource",
       "Properties": {
@@ -1979,6 +2591,291 @@
           "Ref": "ApiGatewayResourceSports"
         },
         "PathPart": "{id}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceJoinpost": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "joinPost",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceJoinpostUseridVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceJoinpost"
+        },
+        "PathPart": "{userId}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceJoinpostUseridVarPostidVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceJoinpostUseridVar"
+        },
+        "PathPart": "{postId}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceJoined": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "joined",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceJoinedUsers": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceJoined"
+        },
+        "PathPart": "users",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceJoinedUsersIdVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceJoinedUsers"
+        },
+        "PathPart": "{id}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceUnjoinpost": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "unjoinPost",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceUnjoinpostUseridVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceUnjoinpost"
+        },
+        "PathPart": "{userId}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceUnjoinpostUseridVarPostidVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceUnjoinpostUseridVar"
+        },
+        "PathPart": "{postId}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceAddlike": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "addLike",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceAddlikeUsers": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceAddlike"
+        },
+        "PathPart": "users",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceAddlikeUsersUseridVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceAddlikeUsers"
+        },
+        "PathPart": "{userId}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceAddlikeUsersUseridVarPostidVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceAddlikeUsersUseridVar"
+        },
+        "PathPart": "{postId}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceUnlike": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "unLike",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceUnlikeUseridVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceUnlike"
+        },
+        "PathPart": "{userId}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceUnlikeUseridVarPostidVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceUnlikeUseridVar"
+        },
+        "PathPart": "{postId}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceGetlike": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "getLike",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceGetlikeUsers": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceGetlike"
+        },
+        "PathPart": "users",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceGetlikeUsersIdVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceGetlikeUsers"
+        },
+        "PathPart": "{id}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceChechandpost": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "chechandpost",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceChechandpostUser": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceChechandpost"
+        },
+        "PathPart": "user",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceChechandpostUserCognitoidVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceChechandpostUser"
+        },
+        "PathPart": "{cognitoId}",
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
         }
@@ -2884,6 +3781,231 @@
         }
       }
     },
+    "ApiGatewayMethodFollowersIdVarFollowersidVarOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceFollowersIdVarFollowersidVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodUnfollowIdVarFollowersidVarOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceUnfollowIdVarFollowersidVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodFollowersIdVarOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceFollowersIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodYourfollowersIdVarOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceYourfollowersIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodSearchparamsOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceSearchparams"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
     "ApiGatewayMethodLikeCommentIdVarOptions": {
       "Type": "AWS::ApiGateway::Method",
       "Properties": {
@@ -3238,6 +4360,321 @@
         },
         "ResourceId": {
           "Ref": "ApiGatewayResourceSportsIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodJoinpostUseridVarPostidVarOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceJoinpostUseridVarPostidVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodJoinedUsersIdVarOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceJoinedUsersIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodUnjoinpostUseridVarPostidVarOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceUnjoinpostUseridVarPostidVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodAddlikeUsersUseridVarPostidVarOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceAddlikeUsersUseridVarPostidVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodUnlikeUseridVarPostidVarOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceUnlikeUseridVarPostidVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodGetlikeUsersIdVarOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceGetlikeUsersIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodChechandpostUserCognitoidVarOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,POST'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceChechandpostUserCognitoidVar"
         },
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
@@ -4164,6 +5601,236 @@
         "PostLikeAtPostLambdaPermissionApiGateway"
       ]
     },
+    "ApiGatewayMethodFollowersIdVarFollowersidVarGet": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceFollowersIdVarFollowersidVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "FollowLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "FollowLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayMethodUnfollowIdVarFollowersidVarGet": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceUnfollowIdVarFollowersidVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "UnfollowLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "UnfollowLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayMethodFollowersIdVarGet": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceFollowersIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "GetSomeoneFollowersLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "GetSomeoneFollowersLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayMethodYourfollowersIdVarGet": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceYourfollowersIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "GetYourFollowersLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "GetYourFollowersLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayMethodSearchparamsGet": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceSearchparams"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "SearchLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "SearchLambdaPermissionApiGateway"
+      ]
+    },
     "ApiGatewayMethodLikeCommentIdVarPost": {
       "Type": "AWS::ApiGateway::Method",
       "Properties": {
@@ -4624,7 +6291,329 @@
         "DeleteSportLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1663061069051": {
+    "ApiGatewayMethodJoinpostUseridVarPostidVarGet": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceJoinpostUseridVarPostidVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "JoinPostLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "JoinPostLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayMethodJoinedUsersIdVarGet": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceJoinedUsersIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "GetJoinedUsersLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "GetJoinedUsersLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayMethodUnjoinpostUseridVarPostidVarGet": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceUnjoinpostUseridVarPostidVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "UnjoinPostLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "UnjoinPostLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayMethodAddlikeUsersUseridVarPostidVarGet": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceAddlikeUsersUseridVarPostidVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "AddLikeAtPostLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "AddLikeAtPostLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayMethodUnlikeUseridVarPostidVarGet": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceUnlikeUseridVarPostidVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "RemoveLikeLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "RemoveLikeLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayMethodGetlikeUsersIdVarGet": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceGetlikeUsersIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "GetLikesLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "GetLikesLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayMethodChechandpostUserCognitoidVarPost": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "POST",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceChechandpostUserCognitoidVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "CheckUserExistsLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "CheckUserExistsLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayDeployment1663230965354": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -4653,6 +6642,11 @@
         "ApiGatewayMethodCommentDeleteIdVarOptions",
         "ApiGatewayMethodCommentsUserIdVarOptions",
         "ApiGatewayMethodLikePostIdVarOptions",
+        "ApiGatewayMethodFollowersIdVarFollowersidVarOptions",
+        "ApiGatewayMethodUnfollowIdVarFollowersidVarOptions",
+        "ApiGatewayMethodFollowersIdVarOptions",
+        "ApiGatewayMethodYourfollowersIdVarOptions",
+        "ApiGatewayMethodSearchparamsOptions",
         "ApiGatewayMethodLikeCommentIdVarOptions",
         "ApiGatewayMethodPaymentPremiumOptions",
         "ApiGatewayMethodAddlocationsOptions",
@@ -4661,6 +6655,13 @@
         "ApiGatewayMethodLocationsIdVarOptions",
         "ApiGatewayMethodSportsOptions",
         "ApiGatewayMethodSportsIdVarOptions",
+        "ApiGatewayMethodJoinpostUseridVarPostidVarOptions",
+        "ApiGatewayMethodJoinedUsersIdVarOptions",
+        "ApiGatewayMethodUnjoinpostUseridVarPostidVarOptions",
+        "ApiGatewayMethodAddlikeUsersUseridVarPostidVarOptions",
+        "ApiGatewayMethodUnlikeUseridVarPostidVarOptions",
+        "ApiGatewayMethodGetlikeUsersIdVarOptions",
+        "ApiGatewayMethodChechandpostUserCognitoidVarOptions",
         "ApiGatewayMethodUserGet",
         "ApiGatewayMethodUserIdVarGet",
         "ApiGatewayMethodPostUserPost",
@@ -4681,6 +6682,11 @@
         "ApiGatewayMethodCommentDeleteIdVarDelete",
         "ApiGatewayMethodCommentsUserIdVarGet",
         "ApiGatewayMethodLikePostIdVarPost",
+        "ApiGatewayMethodFollowersIdVarFollowersidVarGet",
+        "ApiGatewayMethodUnfollowIdVarFollowersidVarGet",
+        "ApiGatewayMethodFollowersIdVarGet",
+        "ApiGatewayMethodYourfollowersIdVarGet",
+        "ApiGatewayMethodSearchparamsGet",
         "ApiGatewayMethodLikeCommentIdVarPost",
         "ApiGatewayMethodPaymentPremiumGet",
         "ApiGatewayMethodAddlocationsPost",
@@ -4690,7 +6696,14 @@
         "ApiGatewayMethodLocationsIdVarDelete",
         "ApiGatewayMethodSportsGet",
         "ApiGatewayMethodSportsIdVarGet",
-        "ApiGatewayMethodSportsIdVarDelete"
+        "ApiGatewayMethodSportsIdVarDelete",
+        "ApiGatewayMethodJoinpostUseridVarPostidVarGet",
+        "ApiGatewayMethodJoinedUsersIdVarGet",
+        "ApiGatewayMethodUnjoinpostUseridVarPostidVarGet",
+        "ApiGatewayMethodAddlikeUsersUseridVarPostidVarGet",
+        "ApiGatewayMethodUnlikeUseridVarPostidVarGet",
+        "ApiGatewayMethodGetlikeUsersIdVarGet",
+        "ApiGatewayMethodChechandpostUserCognitoidVarPost"
       ]
     },
     "GetUsersLambdaPermissionApiGateway": {
@@ -5433,6 +7446,191 @@
         }
       }
     },
+    "FollowLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "FollowLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
+    },
+    "UnfollowLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "UnfollowLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
+    },
+    "GetSomeoneFollowersLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "GetSomeoneFollowersLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
+    },
+    "GetYourFollowersLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "GetYourFollowersLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
+    },
+    "SearchLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "SearchLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
+    },
     "PostLikeAtCommentLambdaPermissionApiGateway": {
       "Type": "AWS::Lambda::Permission",
       "Properties": {
@@ -5802,6 +8000,265 @@
           ]
         }
       }
+    },
+    "JoinPostLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "JoinPostLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
+    },
+    "GetJoinedUsersLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "GetJoinedUsersLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
+    },
+    "UnjoinPostLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "UnjoinPostLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
+    },
+    "AddLikeAtPostLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "AddLikeAtPostLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
+    },
+    "RemoveLikeLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "RemoveLikeLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
+    },
+    "GetLikesLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "GetLikesLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
+    },
+    "CheckUserExistsLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "CheckUserExistsLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
     }
   },
   "Outputs": {
@@ -5816,7 +8273,7 @@
     "GetUsersLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetUsersLambdaVersionB44Hnxd9cCzCak0XeyeFivDq71D9i1F8PA1dieNQqqY"
+        "Ref": "GetUsersLambdaVersionIy9yu9fuq54nbQ0ZrL500J4OrVacPmJvb30R9LfI"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-GetUsersLambdaFunctionQualifiedArn"
@@ -5825,7 +8282,7 @@
     "GetUserByIdLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetUserByIdLambdaVersion1eSFWvSpr0FxseeN8HssnXQ63G2Ee4f5sgrD5ivk"
+        "Ref": "GetUserByIdLambdaVersion2Q6R0fsJvIZeYFIS4Dpuhm18dIf6Grz0de7OaEeZBj0"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-GetUserByIdLambdaFunctionQualifiedArn"
@@ -5834,7 +8291,7 @@
     "PostUserLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "PostUserLambdaVersionoO9JAguj9NATLGqnIak6gCzt3VhboUmVXh77mC0uw"
+        "Ref": "PostUserLambdaVersionl5IazlSSyKgZyJwvJeKzjcoz51Sw3LLWGI5APa1ak"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-PostUserLambdaFunctionQualifiedArn"
@@ -5843,7 +8300,7 @@
     "UpdateUserLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "UpdateUserLambdaVersionfsNc5RQcjDeoq8H00PbxnnGviK6IDnVEmYy3tD1r8"
+        "Ref": "UpdateUserLambdaVersionYujQSodAdMReQ4QzqH5Iigze5ra72v6ablzi6I7tk"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-UpdateUserLambdaFunctionQualifiedArn"
@@ -5852,7 +8309,7 @@
     "DeleteUserLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "DeleteUserLambdaVersion2ppzfs7MbOSeNGOj5APefzWIH5Es4NFiaUNM0Wy4Zw"
+        "Ref": "DeleteUserLambdaVersionPvPfGNtfI9JKi8nvEmlv8UYh0Kw6ZJzS7L9LFzifs"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-DeleteUserLambdaFunctionQualifiedArn"
@@ -5861,7 +8318,7 @@
     "PostPostAtUserLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "PostPostAtUserLambdaVersiongegq9HAgrt03QdO25wp2o3rTed8muO2mHEmYmgQvys"
+        "Ref": "PostPostAtUserLambdaVersionpnbd1mTP2ovZXUQ6yAHYylTR5vCtwyjYa6janzjnF1M"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-PostPostAtUserLambdaFunctionQualifiedArn"
@@ -5870,7 +8327,7 @@
     "GetPostsByUserIdLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetPostsByUserIdLambdaVersionp92b6ZfPIvit0sTtuNf3iO5jHyQxSK8Muh14KHkGmI"
+        "Ref": "GetPostsByUserIdLambdaVersionSd55JLGkXee9pH0ctTudLSdzBszPcL3Y1wgOw27xvE"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-GetPostsByUserIdLambdaFunctionQualifiedArn"
@@ -5879,7 +8336,7 @@
     "GetOnePostLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetOnePostLambdaVersionXuMR19RbXTFVnNWf1dNSxtnCyFpauoTCbyBInC9Kw"
+        "Ref": "GetOnePostLambdaVersionBZbApN0hkEKLO6CyxMF61nsvTuLm2t0pcgCxOyyhM"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-GetOnePostLambdaFunctionQualifiedArn"
@@ -5888,7 +8345,7 @@
     "GetAllPostsLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetAllPostsLambdaVersionQ7R75JIZQxzPrS2KTx5sLV4IWI0OWdAz7sffrE8ikLM"
+        "Ref": "GetAllPostsLambdaVersion6snbWEkrT86zAGyEf55CmXygygNRxXsjqMdNAESxgc"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-GetAllPostsLambdaFunctionQualifiedArn"
@@ -5897,7 +8354,7 @@
     "GetPostsByTagLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetPostsByTagLambdaVersionrwAE9NeCxhYtfXyFN2cFTdfLskFYZgsWwvz2XhlZNw"
+        "Ref": "GetPostsByTagLambdaVersiongnNbL8NmOqQzlx16hCfTvdkVJ8EbvaUUTPXLY4bV8"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-GetPostsByTagLambdaFunctionQualifiedArn"
@@ -5906,7 +8363,7 @@
     "GetPostByLocationOrSportLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetPostByLocationOrSportLambdaVersionXa8fJlF6awNXsVGUOCDz1KTbOJnFRhwmRII9ryM"
+        "Ref": "GetPostByLocationOrSportLambdaVersion1NiuuYilG6zO6aeer7xwLNFYkufoFmFmUbrDYpCum4"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-GetPostByLocationOrSportLambdaFunctionQualifiedArn"
@@ -5915,7 +8372,7 @@
     "UpdatePostLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "UpdatePostLambdaVersionUU0ZXpHy699JNlBiwwXNKhAK8xVaVX9bHN7zHCPgM"
+        "Ref": "UpdatePostLambdaVersionCfxgBJZEyHxP3qwDIRmzVDKeB0yZ1RBIfECRHm3oJk"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-UpdatePostLambdaFunctionQualifiedArn"
@@ -5924,7 +8381,7 @@
     "DeletePostLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "DeletePostLambdaVersion7Zsfr1JPTMwk3V38qEytW85Gv4eL53dSGggZ5z8i0c"
+        "Ref": "DeletePostLambdaVersionYqOXYCrIFM89hwoc8ckoea7VbHhAIFz8uyvWdYlNw4w"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-DeletePostLambdaFunctionQualifiedArn"
@@ -5933,7 +8390,7 @@
     "PostCommentAtPostLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "PostCommentAtPostLambdaVersionQteR0J9mltBZuFEYCYafVUk5nIXyxOINyAaYszbA"
+        "Ref": "PostCommentAtPostLambdaVersion50wOjYCvlOJkRhUD1fIlPIhSDsXjOGFhy0kF1JNbM"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-PostCommentAtPostLambdaFunctionQualifiedArn"
@@ -5942,7 +8399,7 @@
     "GetCommentsAtPostLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetCommentsAtPostLambdaVersionVIQ1wgjcMMmpogwyRiFlv010tz8vjPDsaAVJj5Bnq8"
+        "Ref": "GetCommentsAtPostLambdaVersionqKQEdWfDQZSXcTTS9ouazH65OqCmtfxwipjUFkPw"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-GetCommentsAtPostLambdaFunctionQualifiedArn"
@@ -5951,7 +8408,7 @@
     "GetOneCommentLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetOneCommentLambdaVersionPPZ5WN8S7cA576W41xj1ItHmpVjDciioqixl62KcdI"
+        "Ref": "GetOneCommentLambdaVersioniCd6yGOwqNF3V1IviFia1vk3zgZY3aeanJXIt4uGfQ"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-GetOneCommentLambdaFunctionQualifiedArn"
@@ -5960,7 +8417,7 @@
     "UpdateCommentLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "UpdateCommentLambdaVersiond1PiAdgJXYnX7G2y6aA0mLkeHpCSAxAzBpdPpGrwtQ"
+        "Ref": "UpdateCommentLambdaVersion1D1DJVcEcbCFVoQLMvUayTDt0erQaA3WTt4vPWE1rM"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-UpdateCommentLambdaFunctionQualifiedArn"
@@ -5969,7 +8426,7 @@
     "DeleteCommentLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "DeleteCommentLambdaVersionnveUMj4Galm1b2hc4DI6jkH6kO16aFyWASBGwDdM"
+        "Ref": "DeleteCommentLambdaVersionYmRBowpupcfVKNtH9fHEST2KfQpNLD6cXVbSyty1jQg"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-DeleteCommentLambdaFunctionQualifiedArn"
@@ -5978,7 +8435,7 @@
     "GetCommentsByUserIdLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetCommentsByUserIdLambdaVersionoQjEYMde5ES2CFvt2yrJtag37Epl1qWmQoXeHvKtP0"
+        "Ref": "GetCommentsByUserIdLambdaVersionGwMU0AidAklEfXP2T3Igi3leUm2RInqPudP3zhZTs"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-GetCommentsByUserIdLambdaFunctionQualifiedArn"
@@ -5987,16 +8444,61 @@
     "PostLikeAtPostLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "PostLikeAtPostLambdaVersionoANBjYob93294QRcffvrvaQ7suu9csgE3iyCW5rSZts"
+        "Ref": "PostLikeAtPostLambdaVersionzkeT0gltOkSy3c8kzLFHSFuVA848O9ZBmubAWWg6e8"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-PostLikeAtPostLambdaFunctionQualifiedArn"
       }
     },
+    "FollowLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "FollowLambdaVersionY8gsr3OVNphP8SZJs02yR94nlFjMkxiC6rIwNvubQ"
+      },
+      "Export": {
+        "Name": "sls-hobbies-app-ffe-dev-FollowLambdaFunctionQualifiedArn"
+      }
+    },
+    "UnfollowLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "UnfollowLambdaVersionZ521ouSBO0kO2k1DKn3VCbudGxq0CWE2yXL1hKaeo"
+      },
+      "Export": {
+        "Name": "sls-hobbies-app-ffe-dev-UnfollowLambdaFunctionQualifiedArn"
+      }
+    },
+    "GetSomeoneFollowersLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "GetSomeoneFollowersLambdaVersion9fQzTvSPoFctEIEsVFRVLbLbqiGftt6Tny8K5fCtTw"
+      },
+      "Export": {
+        "Name": "sls-hobbies-app-ffe-dev-GetSomeoneFollowersLambdaFunctionQualifiedArn"
+      }
+    },
+    "GetYourFollowersLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "GetYourFollowersLambdaVersionYN8jkhKlGRw5jXvEGG36vXF1GVUiSFkuufeMowquiI"
+      },
+      "Export": {
+        "Name": "sls-hobbies-app-ffe-dev-GetYourFollowersLambdaFunctionQualifiedArn"
+      }
+    },
+    "SearchLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "SearchLambdaVersionminOTcIqlKzabHaHOmh0dVif0qmkiTGBbaeiTYU"
+      },
+      "Export": {
+        "Name": "sls-hobbies-app-ffe-dev-SearchLambdaFunctionQualifiedArn"
+      }
+    },
     "PostLikeAtCommentLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "PostLikeAtCommentLambdaVersionr4aFgeg5tCCXmKnSPU6kP9IP7VtDkR3MfKvDJpTXM"
+        "Ref": "PostLikeAtCommentLambdaVersioneiLP8c5J0Pt3dS8oBFh0QsiKKybzfinlRQxyphdc"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-PostLikeAtCommentLambdaFunctionQualifiedArn"
@@ -6005,7 +8507,7 @@
     "PremiumPlanLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "PremiumPlanLambdaVersion2kdDRmtZvJIV1pspWF89VEUYwJNFgNSPx7N4QO38ck"
+        "Ref": "PremiumPlanLambdaVersionjVk5BeyMzNHQ20K0CntN4lxbqkBfF3hmdrnYCVS9k"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-PremiumPlanLambdaFunctionQualifiedArn"
@@ -6014,7 +8516,7 @@
     "AddLocationsLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "AddLocationsLambdaVersion6zVfiRYgkukgS0DoXQ0UiTf1qkijVMIZkcxnhZ6e0g"
+        "Ref": "AddLocationsLambdaVersionBYF7Tp88ysOHYc8dPJmdytkw2F8NUE0J1nms2a2hCo"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-AddLocationsLambdaFunctionQualifiedArn"
@@ -6023,7 +8525,7 @@
     "AddSportsLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "AddSportsLambdaVersionnamSqIn00WjNHiDGY1DV3jUwDTipXSFenjbhlWaLcPg"
+        "Ref": "AddSportsLambdaVersiongGqYeFyhvXYIkqCCV5NcMBJtgyFx3l3k4LAmsgyo"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-AddSportsLambdaFunctionQualifiedArn"
@@ -6032,7 +8534,7 @@
     "GetLocationsLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetLocationsLambdaVersionZMeBGE4HuNPcxHZduAJOSwN510Y26wMXd13YN4RC5U"
+        "Ref": "GetLocationsLambdaVersioneHn7nOqrhM2lG6fawqdHKKST9DhE7ohmAnFLwMr08I"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-GetLocationsLambdaFunctionQualifiedArn"
@@ -6041,7 +8543,7 @@
     "GetOneLocationLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetOneLocationLambdaVersionPFeJknpY3N58dRcZNKEPJRhDTUCo04x21azB0KgiRSE"
+        "Ref": "GetOneLocationLambdaVersion0aIulyhdLIaRqrm6KhpVli4S2ZoX1pWBAi7ejPWnCk"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-GetOneLocationLambdaFunctionQualifiedArn"
@@ -6050,7 +8552,7 @@
     "DeleteLocationLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "DeleteLocationLambdaVersionJlnpMhf0IXOkMcLI57A7uGyFsc2IentBIEWVoSpbzes"
+        "Ref": "DeleteLocationLambdaVersionCpCrgghMTAv24URGfBf4ftxbaeDglcBCODKpvC08A4"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-DeleteLocationLambdaFunctionQualifiedArn"
@@ -6059,7 +8561,7 @@
     "GetSportsLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetSportsLambdaVersionZj0ZtHBBEJtT7ze0CSq2CNPvOUW3Tp9UWwkh5iBI"
+        "Ref": "GetSportsLambdaVersion3QzMvbxnd25FCZ17yn8GXbl0kKEtqchkX6PsdcD6o48"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-GetSportsLambdaFunctionQualifiedArn"
@@ -6068,7 +8570,7 @@
     "GetOneSportLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetOneSportLambdaVersionFT6iEDRTbm8Oq4qixcGwX87P2WMf1Okn5o8RC3T9eg"
+        "Ref": "GetOneSportLambdaVersion4hVSKTE3z3bSWT5fgYKFhQOAM1A1vJBymvym8AwwRo"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-GetOneSportLambdaFunctionQualifiedArn"
@@ -6077,10 +8579,73 @@
     "DeleteSportLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "DeleteSportLambdaVersiondLPB1dTmIRpYYo7vDx38oxofOMaYUKD6opQui96Ns"
+        "Ref": "DeleteSportLambdaVersionwI0iDSRKjIVSpPJ1h8xfgTy01JhREvLyw93NkwxrU"
       },
       "Export": {
         "Name": "sls-hobbies-app-ffe-dev-DeleteSportLambdaFunctionQualifiedArn"
+      }
+    },
+    "JoinPostLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "JoinPostLambdaVersionC9X9P65DHANa8PujY3T0A1u7nNmlQDCQRG1sKBE"
+      },
+      "Export": {
+        "Name": "sls-hobbies-app-ffe-dev-JoinPostLambdaFunctionQualifiedArn"
+      }
+    },
+    "GetJoinedUsersLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "GetJoinedUsersLambdaVersionNwqhybTnL15RjKL1cZAGbmc8XrJ3lEvnFxSgLP17lU"
+      },
+      "Export": {
+        "Name": "sls-hobbies-app-ffe-dev-GetJoinedUsersLambdaFunctionQualifiedArn"
+      }
+    },
+    "UnjoinPostLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "UnjoinPostLambdaVersionRl90w2hVBucFuuRqs44tiTVyBf6SxMQrhtV32XWKICY"
+      },
+      "Export": {
+        "Name": "sls-hobbies-app-ffe-dev-UnjoinPostLambdaFunctionQualifiedArn"
+      }
+    },
+    "AddLikeAtPostLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "AddLikeAtPostLambdaVersionQ48MtSKLSSfkJ2ZJn54yprKm45Hf7rUN3b1Y6ths2M"
+      },
+      "Export": {
+        "Name": "sls-hobbies-app-ffe-dev-AddLikeAtPostLambdaFunctionQualifiedArn"
+      }
+    },
+    "RemoveLikeLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "RemoveLikeLambdaVersionJkfL1H3eLiy9tfmRlcV7KVYVp8KSIFQy5cr9d1Uz5qo"
+      },
+      "Export": {
+        "Name": "sls-hobbies-app-ffe-dev-RemoveLikeLambdaFunctionQualifiedArn"
+      }
+    },
+    "GetLikesLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "GetLikesLambdaVersionbGrG1h9Lt8PdqZef8bRZJRZozcRZOvEO8lEWlIeeAI"
+      },
+      "Export": {
+        "Name": "sls-hobbies-app-ffe-dev-GetLikesLambdaFunctionQualifiedArn"
+      }
+    },
+    "CheckUserExistsLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "CheckUserExistsLambdaVersionBw5141rhlpW3LdLCm0E4cykHdkWl7uJ2icO5DP3NNg"
+      },
+      "Export": {
+        "Name": "sls-hobbies-app-ffe-dev-CheckUserExistsLambdaFunctionQualifiedArn"
       }
     },
     "ServiceEndpoint": {
