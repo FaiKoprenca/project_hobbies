@@ -5,21 +5,27 @@ module.exports.checkUserExists = async (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;
     const cognitoId = event.pathParameters.cognitoId;
 
-    const { username, location, bio } = JSON.parse(event.body); //if user dosent exist
-
+    
     try {
-        const user = User.findOne(cognitoId);
+    await connectToDatabase();
+    console.log(cognitoId);
 
+        const user = await  User.findOne({userCognitoId:cognitoId});
+        
+        
+        
         if (user) {
             console.log("!!!!!!!!!!!!!!!!!!!!! EXISTS !!!!!!!!!!!!!!!!!!!!!!!!!!")
         } else {
+            const { username, location, bio } = JSON.parse(event.body); //if user dosent exist
             User.init();
-            const user = new User({
-                username,
-                location,
-                bio,
+            const newUser = new User({
+              username:  username,
+             location:   location,
+              bio:  bio,
             });
-            const newUser = await User.create(user);
+            await newUser.save()
+            
 
             return {
                 headers: {
@@ -35,6 +41,7 @@ module.exports.checkUserExists = async (event, context, callback) => {
         }
     }
     catch (error) {
+        console.log(error)
         return (error);
     }
 }
