@@ -5,6 +5,7 @@ const User = require('../../models/User');
 module.exports.getUserByCognitoId = async (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;
     const id = event.body.id;
+    console.log(id , " id here");
   
     try {
       await connectToDatabase();
@@ -29,6 +30,7 @@ module.exports.getUserByCognitoId = async (event, context, callback) => {
         body: JSON.stringify(user),
       };
     } catch (error) {
+        console.log(error);
       return(error);
     }
 };
