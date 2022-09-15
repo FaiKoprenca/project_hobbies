@@ -4,7 +4,7 @@ const User = require('../../models/User');
 
 module.exports.getUserByCognitoId = async (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;
-    const cognitoId = event.body.cognitoId;
+    const cognitoId = event.body.cognitoId;      //check 
     console.log(cognitoId , " id here");
   
     try {

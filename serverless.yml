@@ -350,6 +350,14 @@ functions:
           path: chechandpost/user/{cognitoId}
           method: post
           cors: true
+
+  getPostPages:
+    handler: handlers/PostHandler/GetPostPages.getPostPages
+    events:
+      - http:
+          path: allpostsPages
+          method: get
+          cors: true
 plugins:
   - serverless-offline
   - serverless-plugin-common-excludes
