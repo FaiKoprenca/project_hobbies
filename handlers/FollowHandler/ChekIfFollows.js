@@ -14,16 +14,6 @@ module.exports.checkIfFollows = async (event, context, callback) => {
     const userFollower = await User.findById(followersId);
 
     const boolean = userFollower.followers.includes(id)
-    
-    // for (let index = 0; index < userFollower.followers.length; index++) {
-    //     if (userFollower.followers[index]=== id) {
-    //         boolean = true 
-            
-    //     }
-        
-    // }
-    console.log(boolean);
-    
    
     callback(null, {
       headers: {
