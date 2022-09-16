@@ -334,6 +334,14 @@ functions:
           path: allpostsPages
           method: get
           cors: true
+
+  checkIfFollows:
+    handler: handlers/FollowHandler/ChekIfFollows.checkIfFollows
+    events:
+      - http:
+          path: boolIfFollows/{id}/{followersId}
+          method: get
+          cors: true
 plugins:
   - serverless-offline
   - serverless-plugin-common-excludes
