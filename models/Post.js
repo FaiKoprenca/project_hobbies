@@ -3,14 +3,9 @@ const Schema = mongoose.Schema;
 
 const PostSchema = new mongoose.Schema(
   {
-    //TODO Cognito ID
     postCognitoId: {
       type: String,
     },
-    /*userId: {   
-      type: Schema.Types.ObjectId,
-      ref: "users",
-    },*/
     username: {
       type: String,
       required: true,

@@ -14,7 +14,7 @@ module.exports.getAllPosts = async (event, context, callback) => {
         console.log(totalDocuments);
         totalPages = Math.ceil(totalDocuments / 10);
         console.log(totalPages);
-        const post = await Post.find().skip(skipValue).limit(10);
+        const post = await Post.find().skip(skipValue).limit(10).sort({date : -1});
 
         if (!post) {
             callback(null, (404, 'No posts Found.'));

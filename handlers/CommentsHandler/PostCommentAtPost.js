@@ -15,9 +15,10 @@ module.exports.postCommentAtPost = async (event, context, callback) => {
   //   return res.status(400).json(errors);
   // }
 
-  const { text } = JSON.parse(event.body);
+  const { commentCognitoId, text } = JSON.parse(event.body);   
 
   const comments = new Comment({
+    commentCognitoId,
     text,
   });
 
