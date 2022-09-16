@@ -7,7 +7,6 @@ module.exports.getPostByLocationOrSport = async (event, context, callback) => {
 
   try {
     await connectToDatabase();
-    //const querystring = event.queryStringParameters;
     const querystring = event.queryStringParameters;
     let filter = {};
     filter = querystring.tags;

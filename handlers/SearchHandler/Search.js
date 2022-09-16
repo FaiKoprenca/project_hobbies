@@ -7,13 +7,12 @@ module.exports.search = async (event, context, callback) => {
 
   try {
     await connectToDatabase();
-    //const querystring = event.queryStringParameters;
     const querystring = event.queryStringParameters;
     let filter = {};
     filter = querystring.searchQuery;
 
     const post = await Post.find({
-      $or: [{ username: { $regex: filter } }, { text: { $regex: filter } }],
+      $or: [{ username: { $regex: filter, $options: "i" } }, { text: { $regex: filter, $options: "i" } }],
     });
 
     const user = await User.find({

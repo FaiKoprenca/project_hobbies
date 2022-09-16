@@ -2,8 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const commentSchema = new mongoose.Schema({
-    
-    //TODO Cognito ID
+
     commentCognitoId:{
         type:String,
     },
@@ -15,10 +14,6 @@ const commentSchema = new mongoose.Schema({
         type: Date,
         default: Date.now()
     },
-    /*postId: {
-        type: Schema.Types.ObjectId,
-        ref: 'Post'
-    },*/
     text: {
         type: String,
         required: true

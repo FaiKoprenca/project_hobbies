@@ -1,13 +1,11 @@
 const connectToDatabase = require("../../database/db");
 const Post = require("../../models/Post");
-const LocationTag = require("../../models/LocationTag");
 
 module.exports.getPostsByTag = async (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
 
   try {
-    await connectToDatabase();
-    //const querystring = event.queryStringParameters;
+    await connectToDatabase();;
     const querystring = event.queryStringParameters;
     let filter = {};
     filter = querystring.tags.split(',');

@@ -4,7 +4,7 @@ const User = require('../../models/User');
 
 module.exports.getUserByCognitoId = async (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;
-    const cognitoId = event.pathParameters.cognitoId;      //check 
+    const cognitoId = event.pathParameters.cognitoId;     
     console.log(cognitoId , " id here");
   
     try {
@@ -15,7 +15,7 @@ module.exports.getUserByCognitoId = async (event, context, callback) => {
       //.populate("posts");
   
       if (!user) {
-        callback(null, (404, `No user found with id: ${cognitoId}`));
+        callback(null, (404, "No user found"));
       }
   
       return {

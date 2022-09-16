@@ -5,7 +5,6 @@ const Comment = require("../../models/Comments");
 //const validateCommentInput = require("../../Validations/validateComments");
 
 module.exports.postCommentAtPost = async (event, context, callback) => {
-  //TODO add user id at comment
   context.callbackWaitsForEmptyEventLoop = false;
   const id = event.pathParameters.id;
   //TODO
@@ -15,7 +14,7 @@ module.exports.postCommentAtPost = async (event, context, callback) => {
   //   return res.status(400).json(errors);
   // }
 
-  const { commentCognitoId, text } = JSON.parse(event.body);   
+  const { commentCognitoId, text } = JSON.parse(event.body);
 
   const comments = new Comment({
     commentCognitoId,
@@ -32,9 +31,6 @@ module.exports.postCommentAtPost = async (event, context, callback) => {
       { $push: { comment: createComment._id } },
       { new: true }
     );
-    /*const finalComment = await User.findOneAndUpdate(
-
-        )*/
     callback(null, {
       headers: {
         "Content-Type": "application/json",
@@ -47,6 +43,6 @@ module.exports.postCommentAtPost = async (event, context, callback) => {
       body: JSON.stringify(createdComment),
     });
   } catch (error) {
-    return(error);
+    return (error);
   }
 };

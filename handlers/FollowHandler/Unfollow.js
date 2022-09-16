@@ -5,9 +5,6 @@ module.exports.unfollow = async (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
   const id = event.pathParameters.id;
   const followersId = event.pathParameters.followersId;
-  //const userId = event.queryStringParameters;
-  // console.log(postId);
-  // console.log(userId);
 
   try {
     await connectToDatabase();

@@ -24,7 +24,6 @@ module.exports.postPostAtUser = async (event, context, callback) => {
     tags,
     date,
     startTime,
-    //endTime,
     limit,
   });
 
@@ -63,7 +62,6 @@ module.exports.postPostAtUser = async (event, context, callback) => {
 
     console.log(postId);
 
-    //TODO the logged in user id
     const userId = event.pathParameters.id;
 
     const post = new Post({

@@ -9,7 +9,6 @@ module.exports.getUserById = async (event, context, callback) => {
     try {
       await connectToDatabase();
       const user = await User.findById(id)
-      //.populate("posts");
   
       if (!user) {
         callback(null, (404, `No user found with id: ${id}`));

@@ -12,12 +12,10 @@ module.exports.joinPost = async (event, context, callback) => {
     try {
         await connectToDatabase();
 
-        // const post = await Post.findById(postId);
         const user = await User.findById(userId);
 
         const joinAtPost = await Post.findOneAndUpdate(
             { _id: postId },
-            //{ $push: { joined: user._id } },
             { $push: { joined: userId } },
             { new: true }
         )

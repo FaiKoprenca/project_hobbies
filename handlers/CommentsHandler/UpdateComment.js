@@ -9,7 +9,6 @@ module.exports.updateComment = async (event, context, callback) => {
     await connectToDatabase();
 
     const reqBody = JSON.parse(event.body);
-
     const updateComments = await Comment.updateOne(
       {
         _id: event.pathParameters.id,

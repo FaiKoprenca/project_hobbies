@@ -3,7 +3,6 @@ const Schema = mongoose.Schema;
 
 const UserSchema = new mongoose.Schema(
   {
-    //TODO Cognito ID
     userCognitoId: {
       type: String,
     },
@@ -41,10 +40,6 @@ const UserSchema = new mongoose.Schema(
         ref: "Comment",
       },
     ],
-    /*likes: {
-      type: Schema.Types.ObjectId,
-      ref: "Like"
-    }*/
   },
   {
     timeStamps: true,
