@@ -107,7 +107,15 @@ functions:
     handler: handlers/PostHandler/DeletePost.deletePost
     events:
       - http:
-          path: post/delete/{userId}/{postId}
+          path: post/delete/{id}
+          method: delete
+          cors: true
+
+  deletePostByUserId:
+    handler: handlers/PostHandler/DeletePostByUserId.deletePostByUserId
+    events:
+      - http:
+          path: delete/post/{userId}/{postId}
           method: delete
           cors: true
 
