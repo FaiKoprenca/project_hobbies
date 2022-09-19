@@ -16,6 +16,8 @@ module.exports.deletePostByUserId = async (event, context, callback) => {
       { $pull: { posts: postId } },
       { new: true },
     )
+    const post = await Post.findByIdAndRemove(postId);
+    
     if (!user) {
       callback(null, (404, `No post found with id: ${userId}, cannot delete`));
     }
