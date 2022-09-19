@@ -103,14 +103,6 @@ functions:
           method: patch
           cors: true
 
-  deletePost:
-    handler: handlers/PostHandler/DeletePost.deletePost
-    events:
-      - http:
-          path: post/delete/{id}
-          method: delete
-          cors: true
-
   deletePostByUserId:
     handler: handlers/PostHandler/DeletePostByUserId.deletePostByUserId
     events:
@@ -348,6 +340,22 @@ functions:
     events:
       - http:
           path: boolIfFollows/{id}/{followersId}
+          method: get
+          cors: true
+
+  checkIfLikes:
+    handler: handlers/LikeHandler/CheckIfLikes.checkIfLikes
+    events:
+      - http:
+          path: boolIfLikes/{id}/{postId}
+          method: get
+          cors: true
+
+  checkIfJoined:
+    handler: handlers/JoinPostHandler/CheckIfJoined.checkIfJoined
+    events:
+      - http:
+          path: boolIfJoined/{id}/{postId}
           method: get
           cors: true
 plugins:

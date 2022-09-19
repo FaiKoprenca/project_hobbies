@@ -1,4 +1,4 @@
-const connectToDatabase = require('../../database/db');
+/*const connectToDatabase = require('../../database/db');
 const User = require('../../models/User');
 const Post = require('../../models/Post');
 
@@ -34,4 +34,4 @@ module.exports.deletePost = async (event, context, callback) => {
   // } catch (error) {
   //   return (error);
   // }
-};
+};*/

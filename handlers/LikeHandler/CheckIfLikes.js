@@ -1,17 +1,17 @@
 const connectToDatabase = require("../../database/db");
-const User = require("../../models/User");
+const Post = require("../../models/Post");
 
-module.exports.checkIfFollows = async (event, context, callback) => {
+module.exports.checkIfLikes = async (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
   const id = event.pathParameters.id;
-  const followersId = event.pathParameters.followersId;
+  const postId = event.pathParameters.postId;
 
   try {
     await connectToDatabase();
-    
-    const userFollower = await User.findById(followersId);
-    const boolean = userFollower.followers.includes(id)
-   
+
+    const likeCheck = await Post.findById(postId);
+    const boolean = likeCheck.likes.includes(id);
+
     callback(null, {
       headers: {
         "Content-Type": "application/json",
