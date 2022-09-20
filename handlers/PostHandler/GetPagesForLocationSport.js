@@ -1,33 +1,28 @@
 const connectToDatabase = require("../../database/db");
 const Post = require("../../models/Post");
-const LocationTag = require("../../models/LocationTag");
 
-module.exports.getPostByLocationOrSport = async (event, context, callback) => {
+module.exports.getPagesForLocationSport = async (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
 
   try {
     await connectToDatabase();
     const querystring = event.queryStringParameters;
-    let page = {};
-    page = querystring.page;
-    //console.log(querystring.page);
-    let skipValue = (querystring.page - 1) * 10;
+    // let page = {};
+    // page = querystring.page;
+    // //console.log(querystring.page);
+    // let skipValue = (querystring.page - 1) * 10;
     let filter = {};
     filter = querystring.tags;
-    //console.log(querystring.tags)
+    // //console.log(querystring.tags)
     let totalDocuments = await Post.count({ "tags": filter });
     console.log(totalDocuments);
     totalPages = Math.ceil(totalDocuments / 10);
     console.log(totalPages);
 
-    let post = await Post.find({ "tags": filter })
-      .skip(skipValue)
-      .limit(10)
-      .sort({ date: -1 });
-
-    if (!post) {
-      callback(null, (404, "No posts Found."));
-    }
+    // let post = await Post.find({ "tags": filter })
+    //   .skip(skipValue)
+    //   .limit(10)
+    //   .sort({ date: -1 });
 
     callback(null, {
       headers: {
@@ -38,7 +33,7 @@ module.exports.getPostByLocationOrSport = async (event, context, callback) => {
         "Access-Control-Allow-Headers": "*",
       },
       statusCode: 200,
-      body: JSON.stringify(post),
+      body: JSON.stringify(totalPages),
     });
   } catch (error) {
     return error;
