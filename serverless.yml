@@ -336,6 +336,22 @@ functions:
           method: get
           cors: true
 
+  getPagesForLocationSport:
+    handler: handlers/PostHandler/GetPagesForLocationSport.getPagesForLocationSport
+    events:
+      - http:
+          path: allPagesforLS
+          method: get
+          cors: true
+
+  getPagesForTags:
+    handler: handlers/PostHandler/GetPagesForTags.getPagesForTags
+    events:
+      - http:
+          path: allPagesforTags
+          method: get
+          cors: true
+
   checkIfFollows:
     handler: handlers/FollowHandler/ChekIfFollows.checkIfFollows
     events:
