@@ -16,6 +16,11 @@ const UserSchema = new mongoose.Schema(
     bio: {
       type: String,
     },
+
+    prfilePicture: {             // !!!!!!!!!!! TODO 
+      type: String,
+    },
+
     followed: [
       {
         type: Schema.Types.ObjectId,

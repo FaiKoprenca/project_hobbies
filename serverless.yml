@@ -1,4 +1,5 @@
 service: hobbies-app-ffe
+
 provider:
   name: aws
   runtime: nodejs16.x
@@ -358,6 +359,7 @@ functions:
           path: boolIfJoined/{id}/{postId}
           method: get
           cors: true
+
 plugins:
   - serverless-offline
   - serverless-plugin-common-excludes

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/FaiKoprenca/project_hobbies#readme",
   "dependencies": {
+    "aws-sdk": "^2.1218.0",
     "dotenv": "^16.0.1",
     "mongodb": "^4.9.0",
     "mongoose": "^6.5.3",
