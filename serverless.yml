@@ -192,6 +192,13 @@ functions:
           method: get
           cors: true
 
+  getFollowed:
+    handler: handlers/FollowHandler/GetFollowed.getFollowed
+    events:
+      - http:
+          path: yourfollowed/{id}
+          method: get
+          cors: true
   search:
     handler: handlers/SearchHandler/Search.search
     events:
