@@ -38,7 +38,7 @@ module.exports.search = async (event, context, callback) => {
         "Access-Control-Allow-Headers": "*",
       },
       statusCode: 200,
-      body: JSON.stringify({user:user, post:post}),
+      body: JSON.stringify(user),
     });
   } catch (error) {
     return error;
