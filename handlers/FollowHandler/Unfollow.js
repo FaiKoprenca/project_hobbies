@@ -13,6 +13,12 @@ module.exports.unfollow = async (event, context, callback) => {
       {$pull: {followers: id}},
       {new : true},
     );
+
+    const user2 =await User.findOneAndUpdate(
+      {_id : id},
+      {$pull: {followed: followersId}},
+      {new : true},
+    );
     
     callback(null, {
       headers: {
