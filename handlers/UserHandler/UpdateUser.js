@@ -15,7 +15,8 @@ module.exports.updateUser = async (event, context, callback) => {
       },   
       {
         location: reqBody.location,
-        bio: reqBody.bio
+        bio: reqBody.bio,
+        prfilePicture: reqBody.prfilePicture
       }
     )
 

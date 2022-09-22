@@ -17,7 +17,7 @@ const UserSchema = new mongoose.Schema(
       type: String,
     },
 
-    prfilePicture: {             // !!!!!!!!!!! TODO 
+    prfilePicture: {
       type: String,
     },
 
