@@ -17,13 +17,14 @@ module.exports.checkUserExists = async (event, context, callback) => {
         if (user) {
             console.log("!!!!!!!!!!!!!!!!!!!!! EXISTS !!!!!!!!!!!!!!!!!!!!!!!!!!")
         } else {
-            const { username, location, bio } = JSON.parse(event.body); //if user dosent exist
+            const { username, location, bio, prfilePicture } = JSON.parse(event.body); //if user dosent exist
             User.init();
             const newUser = new User({
                 userCognitoId: cognitoId,
                 username: username,
                 location: location,
                 bio: bio,
+                prfilePicture: prfilePicture,
             });
             await newUser.save()
 
