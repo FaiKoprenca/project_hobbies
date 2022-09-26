@@ -45,10 +45,11 @@ const UserSchema = new mongoose.Schema(
         ref: "Comment",
       },
     ],
+    date: {
+      type: Date,
+      default: Date.now(),
+    },
   },
-  {
-    timeStamps: true,
-  }
 );
 
 module.exports = mongoose.model("User", UserSchema);
