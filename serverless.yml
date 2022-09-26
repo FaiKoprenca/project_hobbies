@@ -80,6 +80,14 @@ functions:
           method: get
           cors: true
 
+  getPostJoined:
+    handler: handlers/PostHandler/GetPostJoined.getPostJoined
+    events:
+      - http:
+          path: postsJoined/{id}
+          method: get
+          cors: true
+
   getPostsByTag:
     handler: handlers/PostHandler/GetPostsByTag.getPostsByTag
     events:
