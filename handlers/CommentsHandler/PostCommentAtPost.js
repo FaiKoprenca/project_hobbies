@@ -7,18 +7,13 @@ const Comment = require("../../models/Comments");
 module.exports.postCommentAtPost = async (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
   const id = event.pathParameters.id;
-  //TODO
-  // const { errors, isValid } = validateCommentInput(event.body);
 
-  // if (!isValid) {
-  //   return res.status(400).json(errors);
-  // }
-
-  const { commentCognitoId, text } = JSON.parse(event.body);
+  const { commentCognitoId, text, date } = JSON.parse(event.body);
 
   const comments = new Comment({
     commentCognitoId,
     text,
+    date
   });
 
   try {
