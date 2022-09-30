@@ -18,11 +18,9 @@
   },
   "homepage": "https://github.com/FaiKoprenca/project_hobbies#readme",
   "dependencies": {
-    "aws-sdk": "^2.1218.0",
     "dotenv": "^16.0.1",
     "mongodb": "^4.9.0",
     "mongoose": "^6.5.3",
-    "multer": "^1.4.5-lts.1",
     "nodemon": "^2.0.19",
     "serverless": "^3.22.0",
     "serverless-plugin-common-excludes": "^4.0.0",
@@ -30,7 +28,6 @@
     "validator": "^13.7.0"
   },
   "devDependencies": {
-    "serverless-offline": "^9.3.0",
-    "webpack-dev-server": "^4.11.1"
+    "serverless-offline": "^9.3.0"
   }
 }
