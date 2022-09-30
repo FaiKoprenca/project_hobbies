@@ -8,9 +8,10 @@ module.exports.postCommentAtPost = async (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
   const id = event.pathParameters.id;
 
-  const { commentCognitoId, text, date } = JSON.parse(event.body);
+  const { userName, commentCognitoId, text, date } = JSON.parse(event.body);
 
   const comments = new Comment({
+    userName,
     commentCognitoId,
     text,
     date

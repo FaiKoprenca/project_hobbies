@@ -6,6 +6,9 @@ const commentSchema = new mongoose.Schema({
     commentCognitoId:{
         type:String,
     },
+    userName: {
+        type: String,
+    },
     userId: {
         type: Schema.Types.ObjectId,
         ref: 'User'
