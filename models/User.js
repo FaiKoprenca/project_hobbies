@@ -20,7 +20,6 @@ const UserSchema = new mongoose.Schema(
     prfilePicture: {
       type: String,
     },
-
     followed: [
       {
         type: Schema.Types.ObjectId,

@@ -10,6 +10,24 @@ module.exports.getOnePost = async (event, context, callback) => {
     try {
       await connectToDatabase();
       const post = await Post.findById(id);
+      // //console.log(post.startTime);
+      const dateNow = Math.floor(Date.now()/1000);
+      console.log(dateNow);
+
+      const startTimeU = new Date(post.startTime)
+      const startTimeUnix = Math.floor(startTimeU.getTime() / 1000);
+      console.log(startTimeUnix + "!!!!!!!!!!!!!!!!!!!!!!");
+
+      if(startTimeUnix < dateNow)
+      {
+        console.log("completed");
+        post.status = true;
+      }
+      else{
+        post.status = false;
+      }
+
+      console.log(post.status);
   
       if (!post) {
         callback(null, (404, `No post found with id: ${id}`));

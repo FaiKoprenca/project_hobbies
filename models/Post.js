@@ -14,6 +14,9 @@ const PostSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    status: {
+      type: String,
+    },
     tags: [
       {
         type: Schema.Types.ObjectId,
